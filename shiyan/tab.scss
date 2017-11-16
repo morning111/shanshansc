@@ -1,0 +1,189 @@
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input,figure{margin:0;padding:0;}
+ul,ol,li{list-style:none;}
+a,u{text-decoration:none;}
+b,strong{font-weight:100;}
+i,em{font-style:normal;}
+h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:100;}
+img{display:block;border:0;}
+input{outline:none;}
+.clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility: hidden;}
+/*xiangqing*/
+
+#main-cuxiao{
+    width:1190px;
+    min-height:323px;
+    _height:323px;
+    margin:0 auto;
+    margin-top:5px;
+    .yhtm{
+        width: 872px;
+        height:38px;
+        border:1px solid #eee;
+        border-bottom:none; 
+        /* ie 6/7 */
+		.clearfix{
+			*zoom : 1;
+			*height: 1px;
+		}
+		/* IE8+ */
+		.clearfix:after{
+			content: "";
+			height: 0;
+			clear: both;
+			display: block;
+			visibility: hidden;
+		}
+        .first-child,.second-child{
+           width:96px;
+           height:38px;
+           border-right:1px solid #eee;
+           border-bottom:1px solid #eee; 
+        }
+        .first-child>a.hotsail{
+        	color:#666;
+        }
+        .second-child>a.hotsail{
+        	color:#666;
+        }
+        .active{
+            border:1px solid #eee;
+        }
+        li{          
+            float: left;
+            a{
+                font-size: 14px;
+                color:#666;
+                padding-left:20px;
+                line-height: 38px;
+            }
+            a:hover{
+                color:#0C9509;
+            }
+            span{
+                font-size: 14px;
+                color:#666;
+                text-align: center;
+                line-height: 38px;
+                float: left;
+                margin-right:5px;
+            }
+            span:first-child{
+                padding-left:400px;
+            }
+            .shi,.fen,.miao{
+                font-size: 16px;
+                display: block;
+                width:30px;
+                background: #f7f7f7;
+                font-weight: 800;
+            }
+        }
+        .third-child{
+             border-bottom:1px solid #eee;
+        }
+        
+        li:first-child:hover a,li:nth-child(2):hover a{
+            border-bottom:none;
+            font-size:16px;
+            font-weight: 700;
+            color:#666;
+        }
+    }
+    .tab-goodsSail{
+        width:872px;
+        height:284px;
+        border:1px solid #eee;
+        border-top:none;
+        display:block;      
+            .main{
+                width:218px;
+                border: 1px solid #d1d1d1;
+                text-align: center;
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                .change{
+                    width:208px;
+                    height:208px;
+                    margin-right:10px;
+                    display: inline-block;
+                }
+               .meiyou{
+                   margin-right:0;
+               }
+                .zhushi{
+                    width:208px;
+                    white-space: wrap;
+                    font-size:12px;
+                    color:#666;
+                    padding-top:12px;
+                }
+                .cuxiaojiege{
+                    font-size:14px;
+                    color: #666;
+                    padding-top:8px;
+                    span{
+                        font-size:14px;
+                    color: #ff6101;
+                    padding-top:8px;
+                    }
+                }   
+            }           
+            .selected{
+            display:block;
+        }
+        
+    }
+    #main-right{
+        width:235px;
+        height:328px;
+        float: right;
+        position: relative;
+        top:-324px;
+        right:0;        
+        #main-right-top{
+            width:235px;
+            height:128px;
+            border:1px solid #eee;
+            .paper{
+                font-size:18px;
+                color: #666;
+                font-weight: 700;
+                margin:10px;
+                float: left;
+            }
+            .kuaibao{
+                font-size:12px;
+                color: #666;
+                margin-top:10px;
+                float: right;
+                margin-right:10px;
+            }
+            .fangjia{
+                margin-top:45px;
+                margin-left:10px;
+                li{
+                    float: left;
+                   .tongzhi{
+                    font-size:14px;
+                    color: #666;
+                    }
+                    .tongzhi:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            
+        }
+        .main-right-bottom{
+            width:235px;
+            height:182px;
+            margin-top:13px;
+            img{
+                width:235px;
+            height:182px;
+            }
+        }
+    }
+    
+}

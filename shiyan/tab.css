@@ -1,0 +1,221 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input, figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a, u {
+  text-decoration: none;
+}
+
+b, strong {
+  font-weight: 100;
+}
+
+i, em {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+img {
+  display: block;
+  border: 0;
+}
+
+input {
+  outline: none;
+}
+
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/*xiangqing*/
+#main-cuxiao {
+  width: 1190px;
+  min-height: 323px;
+  _height: 323px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+#main-cuxiao .yhtm {
+  width: 872px;
+  height: 38px;
+  border: 1px solid #eee;
+  border-bottom: none;
+  /* ie 6/7 */
+  /* IE8+ */
+}
+#main-cuxiao .yhtm .clearfix {
+  *zoom: 1;
+  *height: 1px;
+}
+#main-cuxiao .yhtm .clearfix:after {
+  content: "";
+  height: 0;
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+#main-cuxiao .yhtm .first-child, #main-cuxiao .yhtm .second-child {
+  width: 96px;
+  height: 38px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+#main-cuxiao .yhtm .first-child > a.hotsail {
+  color: #666;
+}
+#main-cuxiao .yhtm .second-child > a.hotsail {
+  color: #666;
+}
+#main-cuxiao .yhtm .active {
+  border: 1px solid #eee;
+}
+#main-cuxiao .yhtm li {
+  float: left;
+}
+#main-cuxiao .yhtm li a {
+  font-size: 14px;
+  color: #666;
+  padding-left: 20px;
+  line-height: 38px;
+}
+#main-cuxiao .yhtm li a:hover {
+  color: #0C9509;
+}
+#main-cuxiao .yhtm li span {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  line-height: 38px;
+  float: left;
+  margin-right: 5px;
+}
+#main-cuxiao .yhtm li span:first-child {
+  padding-left: 400px;
+}
+#main-cuxiao .yhtm li .shi, #main-cuxiao .yhtm li .fen, #main-cuxiao .yhtm li .miao {
+  font-size: 16px;
+  display: block;
+  width: 30px;
+  background: #f7f7f7;
+  font-weight: 800;
+}
+#main-cuxiao .yhtm .third-child {
+  border-bottom: 1px solid #eee;
+}
+#main-cuxiao .yhtm li:first-child:hover a, #main-cuxiao .yhtm li:nth-child(2):hover a {
+  border-bottom: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #666;
+}
+#main-cuxiao .tab-goodsSail {
+  width: 872px;
+  height: 284px;
+  border: 1px solid #eee;
+  border-top: none;
+  display: block;
+}
+#main-cuxiao .tab-goodsSail .main {
+  width: 218px;
+  border: 1px solid #d1d1d1;
+  text-align: center;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#main-cuxiao .tab-goodsSail .main .change {
+  width: 208px;
+  height: 208px;
+  margin-right: 10px;
+  display: inline-block;
+}
+#main-cuxiao .tab-goodsSail .main .meiyou {
+  margin-right: 0;
+}
+#main-cuxiao .tab-goodsSail .main .zhushi {
+  width: 208px;
+  white-space: wrap;
+  font-size: 12px;
+  color: #666;
+  padding-top: 12px;
+}
+#main-cuxiao .tab-goodsSail .main .cuxiaojiege {
+  font-size: 14px;
+  color: #666;
+  padding-top: 8px;
+}
+#main-cuxiao .tab-goodsSail .main .cuxiaojiege span {
+  font-size: 14px;
+  color: #ff6101;
+  padding-top: 8px;
+}
+#main-cuxiao .tab-goodsSail .selected {
+  display: block;
+}
+#main-cuxiao #main-right {
+  width: 235px;
+  height: 328px;
+  float: right;
+  position: relative;
+  top: -324px;
+  right: 0;
+}
+#main-cuxiao #main-right #main-right-top {
+  width: 235px;
+  height: 128px;
+  border: 1px solid #eee;
+}
+#main-cuxiao #main-right #main-right-top .paper {
+  font-size: 18px;
+  color: #666;
+  font-weight: 700;
+  margin: 10px;
+  float: left;
+}
+#main-cuxiao #main-right #main-right-top .kuaibao {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+  float: right;
+  margin-right: 10px;
+}
+#main-cuxiao #main-right #main-right-top .fangjia {
+  margin-top: 45px;
+  margin-left: 10px;
+}
+#main-cuxiao #main-right #main-right-top .fangjia li {
+  float: left;
+}
+#main-cuxiao #main-right #main-right-top .fangjia li .tongzhi {
+  font-size: 14px;
+  color: #666;
+}
+#main-cuxiao #main-right #main-right-top .fangjia li .tongzhi:hover {
+  text-decoration: underline;
+}
+#main-cuxiao #main-right .main-right-bottom {
+  width: 235px;
+  height: 182px;
+  margin-top: 13px;
+}
+#main-cuxiao #main-right .main-right-bottom img {
+  width: 235px;
+  height: 182px;
+}
+
+/*# sourceMappingURL=tab.css.map */

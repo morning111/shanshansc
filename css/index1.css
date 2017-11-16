@@ -551,34 +551,69 @@ input {
   margin: 0 auto;
   margin-top: 5px;
 }
-#main-cuxiao .yhtm {
+#main-cuxiao .time {
   width: 872px;
-  height: 38px;
+  height: 40px;
   border: 1px solid #eee;
   border-bottom: none;
 }
-#main-cuxiao .yhtm .first-child, #main-cuxiao .yhtm .second-child {
+#main-cuxiao .time .yhtm {
+  width: 196px;
+  height: 39px;
+  border: 1px solid #eee;
+  border-bottom: none;
+  float: left;
+  /* ie 6/7 */
+  /* IE8+ */
+}
+#main-cuxiao .time .yhtm .clearfix {
+  *zoom: 1;
+  *height: 1px;
+}
+#main-cuxiao .time .yhtm .clearfix:after {
+  content: "";
+  height: 0;
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+#main-cuxiao .time .yhtm .first-child, #main-cuxiao .time .yhtm .second-child {
   width: 96px;
   height: 38px;
+  float: left;
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-#main-cuxiao .yhtm .active {
-  border: 1px solid #eee;
-}
-#main-cuxiao .yhtm li {
-  float: left;
-}
-#main-cuxiao .yhtm li a {
+#main-cuxiao .time .yhtm .first-child a, #main-cuxiao .time .yhtm .second-child a {
   font-size: 14px;
   color: #666;
   padding-left: 20px;
   line-height: 38px;
 }
-#main-cuxiao .yhtm li a:hover {
+#main-cuxiao .time .yhtm a:hover {
   color: #0C9509;
 }
-#main-cuxiao .yhtm li span {
+#main-cuxiao .time .yhtm .first-child > a.hotsail {
+  color: #666;
+}
+#main-cuxiao .time .yhtm .second-child > a.hotsail {
+  color: #666;
+}
+#main-cuxiao .time .yhtm .active {
+  border: 1px solid #eee;
+}
+#main-cuxiao .time .yhtm li:first-child:hover a, #main-cuxiao .time .yhtm li:nth-child(2):hover a {
+  border-bottom: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #666;
+}
+#main-cuxiao .time .time-one {
+  float: left;
+  padding-left: 400px;
+  border: 1px solid #D1D1D1;
+}
+#main-cuxiao .time .time-one span {
   font-size: 14px;
   color: #666;
   text-align: center;
@@ -586,46 +621,41 @@ input {
   float: left;
   margin-right: 5px;
 }
-#main-cuxiao .yhtm li span:first-child {
-  padding-left: 300px;
-}
-#main-cuxiao .yhtm li .shi, #main-cuxiao .yhtm li .fen, #main-cuxiao .yhtm li .miao {
+#main-cuxiao .time .time-one .shi, #main-cuxiao .time .time-one .fen, #main-cuxiao .time .time-one .miao {
   font-size: 16px;
   display: block;
   width: 30px;
   background: #f7f7f7;
   font-weight: 800;
 }
-#main-cuxiao .yhtm .third-child {
-  border-bottom: 1px solid #eee;
-}
-#main-cuxiao .yhtm li:first-child:hover a, #main-cuxiao .yhtm li:nth-child(2):hover a {
-  border-bottom: none;
-  font-size: 16px;
-  font-weight: 700;
-  color: #666;
-}
 #main-cuxiao .tab-goodsSail {
   width: 872px;
   height: 284px;
   border: 1px solid #eee;
   border-top: none;
+  display: block;
 }
 #main-cuxiao .tab-goodsSail .main {
+  width: 206px;
+  text-align: center;
   float: left;
-  display: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
-#main-cuxiao .tab-goodsSail .main a img {
-  width: 208px;
+#main-cuxiao .tab-goodsSail .main .change {
+  width: 200px;
   height: 208px;
   margin-right: 10px;
+  display: inline-block;
 }
 #main-cuxiao .tab-goodsSail .main .meiyou {
   margin-right: 0;
 }
 #main-cuxiao .tab-goodsSail .main .zhushi {
-  width: 208px;
-  white-space: wrap;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 12px;
   color: #666;
   padding-top: 12px;
@@ -710,7 +740,7 @@ input {
   left: 0;
 }
 
-/*firstfloor*/
+/*floor*/
 #louceng {
   width: 1190px;
   height: 2890px;
@@ -769,49 +799,53 @@ input {
   width: 656px;
   float: left;
 }
-#louceng #first-floor #liebiao .tab-goodsSail-two .fruit {
+#louceng #first-floor #liebiao .tab-goodsSail-two .fruit1 {
   border-top: 1px solid #ccc;
   position: relative;
   float: left;
 }
-#louceng #first-floor #liebiao .tab-goodsSail-two .fruit a .jiagou1 {
+#louceng #first-floor #liebiao .tab-goodsSail-two .fruit1 .fruit2 {
+  display: block;
+  width: 164px;
+  height: 164px;
+  position: relative;
+}
+#louceng #first-floor #liebiao .tab-goodsSail-two .fruit1 .fruit2 .jiagou1 {
   width: 150px;
   height: 150px;
   margin-top: 14px;
   margin-left: 14px;
 }
-#louceng #first-floor #liebiao .tab-goodsSail-two .fruit .zhushi {
+#louceng #first-floor #liebiao .tab-goodsSail-two .fruit1 #jia-gou {
+  width: 150px;
+  height: 30px;
+  background: #1C6915;
+  margin-left: 14px;
+  position: absolute;
+  top: 134px;
+  left: 0;
+  display: none;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+#louceng #first-floor #liebiao .tab-goodsSail-two .fruit1 .zhushi {
   width: 150px;
   white-space: wrap;
   font-size: 12px;
   color: #666;
-  padding-top: 160px;
   margin-left: 14px;
   cursor: pointer;
 }
-#louceng #first-floor #liebiao .tab-goodsSail-two .fruit .zhushi:hover {
+#louceng #first-floor #liebiao .tab-goodsSail-two .fruit1 .zhushi:hover {
   color: #24C336;
 }
-#louceng #first-floor #liebiao .tab-goodsSail-two .fruit .cuxiaojiege {
+#louceng #first-floor #liebiao .tab-goodsSail-two .fruit1 .cuxiaojiege {
   font-size: 14px;
   color: #ff6101;
   padding-top: 8px;
   margin-left: 14px;
-}
-#louceng #first-floor #liebiao .tab-goodsSail-two .fruit #jia-gou {
-  width: 150px;
-  height: 30px;
-  background: #1C6915;
-  position: absolute;
-  bottom: 29px;
-  left: 14px;
-  display: none;
-}
-#louceng #first-floor #liebiao .tab-goodsSail-two .fruit #jia-gou a {
-  font-size: 16px;
-  color: #fff;
-  padding-left: 30px;
-  line-height: 30px;
 }
 #louceng #first-floor #fist-floor-right {
   width: 235px;
@@ -906,19 +940,39 @@ input {
   width: 660px;
   float: left;
 }
-#louceng #second-floor #liebiao .tab-goodsSail-two li {
+#louceng #second-floor #liebiao .tab-goodsSail-two .fruit1 {
   border-top: 1px solid #ccc;
   border-right: 1px solid #ccc;
   padding-bottom: 20px;
   float: left;
+  position: relative;
 }
-#louceng #second-floor #liebiao .tab-goodsSail-two li a img {
+#louceng #second-floor #liebiao .tab-goodsSail-two .fruit1 .fruit2 {
+  display: block;
+  width: 164px;
+  height: 164px;
+  position: relative;
+}
+#louceng #second-floor #liebiao .tab-goodsSail-two .fruit1 .fruit2 .jiagou1 {
   width: 150px;
   height: 150px;
   margin: 0 7px;
   margin-top: 14px;
 }
-#louceng #second-floor #liebiao .tab-goodsSail-two li .zhushi {
+#louceng #second-floor #liebiao .tab-goodsSail-two .fruit1 #jia-gou {
+  width: 150px;
+  height: 30px;
+  background: #1C6915;
+  position: absolute;
+  top: 134px;
+  left: 0px;
+  display: none;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+#louceng #second-floor #liebiao .tab-goodsSail-two .fruit1 .zhushi {
   width: 150px;
   overflow: hidden;
   white-space: nowrap;
@@ -929,29 +983,14 @@ input {
   padding-top: 10px;
   margin-left: 14px;
 }
-#louceng #second-floor #liebiao .tab-goodsSail-two li .zhushi:hover {
+#louceng #second-floor #liebiao .tab-goodsSail-two .fruit1 .zhushi:hover {
   color: #24C336;
 }
-#louceng #second-floor #liebiao .tab-goodsSail-two li .cuxiaojiege {
+#louceng #second-floor #liebiao .tab-goodsSail-two .fruit1 .cuxiaojiege {
   font-size: 14px;
   color: #ff6101;
   padding-top: 8px;
   margin-left: 14px;
-}
-#louceng #second-floor #liebiao .tab-goodsSail-two li #jia-goua {
-  width: 150px;
-  height: 30px;
-  background: #1C6915;
-  position: absolute;
-  top: 134px;
-  left: 14px;
-  display: none;
-}
-#louceng #second-floor #liebiao .tab-goodsSail-two li #jia-goua a {
-  font-size: 16px;
-  color: #fff;
-  padding-left: 30px;
-  line-height: 30px;
 }
 #louceng #second-floor #liebiao .tab-goodsSail-two li:last-child, #louceng #second-floor #liebiao .tab-goodsSail-two li:nth-child(4) {
   border-right: none;
@@ -1063,19 +1102,39 @@ input {
   width: 660px;
   float: left;
 }
-#louceng #third-floor #liebiao .tab-goodsSail-two li {
+#louceng #third-floor #liebiao .tab-goodsSail-two .fruit1 {
   border-top: 1px solid #ccc;
   border-right: 1px solid #ccc;
   padding-bottom: 20px;
   float: left;
+  position: relative;
 }
-#louceng #third-floor #liebiao .tab-goodsSail-two li a img {
+#louceng #third-floor #liebiao .tab-goodsSail-two .fruit1 .fruit2 {
+  display: block;
+  width: 164px;
+  height: 164px;
+  position: relative;
+}
+#louceng #third-floor #liebiao .tab-goodsSail-two .fruit1 .fruit2 .jiagou1 {
   width: 150px;
   height: 150px;
   margin: 0 7px;
   margin-top: 14px;
 }
-#louceng #third-floor #liebiao .tab-goodsSail-two li .zhushi {
+#louceng #third-floor #liebiao .tab-goodsSail-two .fruit1 #jia-gou {
+  width: 150px;
+  height: 30px;
+  background: #1C6915;
+  position: absolute;
+  top: 134px;
+  left: 0px;
+  display: none;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+#louceng #third-floor #liebiao .tab-goodsSail-two .fruit1 .zhushi {
   width: 150px;
   overflow: hidden;
   white-space: nowrap;
@@ -1086,29 +1145,14 @@ input {
   padding-top: 10px;
   margin-left: 14px;
 }
-#louceng #third-floor #liebiao .tab-goodsSail-two li .zhushi:hover {
+#louceng #third-floor #liebiao .tab-goodsSail-two .fruit1 .zhushi:hover {
   color: #24C336;
 }
-#louceng #third-floor #liebiao .tab-goodsSail-two li .cuxiaojiege {
+#louceng #third-floor #liebiao .tab-goodsSail-two .fruit1 .cuxiaojiege {
   font-size: 14px;
   color: #ff6101;
   padding-top: 8px;
   margin-left: 14px;
-}
-#louceng #third-floor #liebiao .tab-goodsSail-two li #jia-goub {
-  width: 150px;
-  height: 30px;
-  background: #1C6915;
-  position: absolute;
-  top: 134px;
-  left: 14px;
-  display: none;
-}
-#louceng #third-floor #liebiao .tab-goodsSail-two li #jia-goub a {
-  font-size: 16px;
-  color: #fff;
-  padding-left: 30px;
-  line-height: 30px;
 }
 #louceng #third-floor #liebiao .tab-goodsSail-two li:last-child, #louceng #third-floor #liebiao .tab-goodsSail-two li:nth-child(4) {
   border-right: none;
@@ -1206,19 +1250,39 @@ input {
   width: 660px;
   float: left;
 }
-#louceng #fourth-floor #liebiao .tab-goodsSail-two li {
+#louceng #fourth-floor #liebiao .tab-goodsSail-two .fruit1 {
   border-top: 1px solid #ccc;
   border-right: 1px solid #ccc;
   padding-bottom: 20px;
   float: left;
+  position: relative;
 }
-#louceng #fourth-floor #liebiao .tab-goodsSail-two li a img {
+#louceng #fourth-floor #liebiao .tab-goodsSail-two .fruit1 .fruit2 {
+  display: block;
+  width: 164px;
+  height: 164px;
+  position: relative;
+}
+#louceng #fourth-floor #liebiao .tab-goodsSail-two .fruit1 .fruit2 .jiagou1 {
   width: 150px;
   height: 150px;
   margin: 0 7px;
   margin-top: 14px;
 }
-#louceng #fourth-floor #liebiao .tab-goodsSail-two li .zhushi {
+#louceng #fourth-floor #liebiao .tab-goodsSail-two .fruit1 #jia-gou {
+  width: 150px;
+  height: 30px;
+  background: #1C6915;
+  position: absolute;
+  top: 134px;
+  left: 0px;
+  display: none;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+#louceng #fourth-floor #liebiao .tab-goodsSail-two .fruit1 .zhushi {
   width: 150px;
   overflow: hidden;
   white-space: nowrap;
@@ -1229,29 +1293,14 @@ input {
   padding-top: 10px;
   margin-left: 14px;
 }
-#louceng #fourth-floor #liebiao .tab-goodsSail-two li .zhushi:hover {
+#louceng #fourth-floor #liebiao .tab-goodsSail-two .fruit1 .zhushi:hover {
   color: #24C336;
 }
-#louceng #fourth-floor #liebiao .tab-goodsSail-two li .cuxiaojiege {
+#louceng #fourth-floor #liebiao .tab-goodsSail-two .fruit1 .cuxiaojiege {
   font-size: 14px;
   color: #ff6101;
   padding-top: 8px;
   margin-left: 14px;
-}
-#louceng #fourth-floor #liebiao .tab-goodsSail-two li #jia-gouc {
-  width: 150px;
-  height: 30px;
-  background: #1C6915;
-  position: absolute;
-  top: 134px;
-  left: 14px;
-  display: none;
-}
-#louceng #fourth-floor #liebiao .tab-goodsSail-two li #jia-gouc a {
-  font-size: 16px;
-  color: #fff;
-  padding-left: 30px;
-  line-height: 30px;
 }
 #louceng #fourth-floor #liebiao .tab-goodsSail-two li:last-child, #louceng #fourth-floor #liebiao .tab-goodsSail-two li:nth-child(4) {
   border-right: none;

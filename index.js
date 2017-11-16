@@ -189,46 +189,55 @@ $("#header").load("html/indexheader.html");
 	    $("#youxuan-sort").css({display:"none"})
 	})
 	//详情部分的json导入  ‘热卖商品’部分
- /* ajaxGet("json/index.json",function(res){
-         json=eval(res)
-         console.log(json)
-         console.log(json.length)
-        
-            var html="";
-             for(var i=0;i<json.length;i++){
-             	html+=`
-             	<li class="main selected">
-             	    <a href="javascript:;">
-								<img src="images/indeximages/${json[i].img}"/>
+  $.ajax({
+  		type:"get",
+  		url:"http://127.0.0.1/shanshanshangcheng/json/tab.json",
+  		async:true,
+		success:function(json){
+			var title = "";
+			var conStr = "";
+			for(var attr in json){
+				title +=`<li class="first-child active">
+					<a href="javascript:;" class="hotsail">${ json[attr].name }</a>
+				</li>`;
+				for(var j=0;j<json[attr].list.length;j++){
+					var product = json[attr].list[j];
+					conStr +=`<li class="main selected">
+								<a href="cart.html?pid=${product.id}&cname=${attr}">
+								<img src="images/indeximages/${product.img}" class="change"/>
 							    </a>
-							    <p class="zhushi">${json[i].zhushi}</p>
-							    <p class="cuxiaojiege">${json[i].cuxiaojiege}<span>${json[i].shoujia}</span></p>
-					</li>
-             	    <li class="main">
-             	    <a href="javascript:;">
-								<img src="images/indeximages/${json[i].img}"/>
+							    <p class="zhushi">${product.zhushi}</p>
+							    <p class="cuxiaojiege">${product.cuxiaojiege}<span>${product.danjia}</span></p>
+							    <span style="display:none" data-id=${product.id} data-img=${product.img} data-zhushi=${product.zhushi} data-cuxiaojiage=${product.cuxiaojiage} data-danjia=${product.danjia}></span>
+							</li>`
+				}				
+			}
+			$(".yhtm").html(title);
+			$(".tab-goodsSail").html(conStr);
+			//实现选项卡分类效果
+			$(".yhtm .active").mouseenter(function(){
+				var index = $(this).index() +1;
+				var cname = "classify00" + index;
+				var str = "";
+				for(var i=0;i<json[cname].list.length;i++){
+					var product = json[cname].list[i];
+					str +=`<li class="main selected">
+								<a href="cart.html?pid=${product.id}&cname=${attr}">
+								<img src="images/indeximages/${product.img}" class="change"/>
 							    </a>
-							    <p class="zhushi">${json[i].zhushi}</p>
-							    <p class="cuxiaojiege">${json[i].cuxiaojiege}<span>${json[i].shoujia}</span></p>
-					</li>
-	`
-             }
-             
-             $(".tab-goodsSail").html(html)
-           })*/
+							    <p class="zhushi">${product.zhushi}</p>
+							    <p class="cuxiaojiege">${product.cuxiaojiege}<span>${product.danjia}</span></p>
+							    <span style="display:none" data-id=${product.id} data-img=${product.img} data-zhushi=${product.zhushi} data-cuxiaojiage=${product.cuxiaojiage} data-danjia=${product.danjia}></span>
+							</li>`
+				}
+				$(".tab-goodsSail").html(str);
+			})
+		}
+	})
     
-    /*$(".yhtm li").mouseenter(function(){
-    	 $(this).addClass("active")
-                  .siblings()
-                  .removeClass("active")
-    	//隐藏所有的内容
-    	
-    	//留下当前
-    	$("tab-goodsSail li").eq($(this).index())
-    	                         .addClass("selected")
-                                 .siblings()
-                                 .removeClass("selected")
-    })*/
+
+    
+    
  
  
  //详情部分的json导入 一楼
@@ -236,15 +245,16 @@ ajaxGet("json/index1.json",function(res){
 	var json = JSON.parse(res);
 	var val="";
 	for(var i = 0; i<json.length;i++){
-		val +=`<li class="fruit">
-					<a href="javascript:;">
-						<img src="images/indeximages/${json[i].img}" class="jiagou1"/>
-						</a>
-						<p class="zhushi" title="广西新鲜水果 百香果鸡蛋果 中果 8斤52元 包邮 ">${json[i].zhushi}</p>
-						<p class="cuxiaojiege">${json[i].cuxiaojiege}</p>
-						<div id="jia-gou">
-							<a href="javascript:;" id="jia-gou11">${json[i].jiagou}</a>
-						</div>
+		val +=`<li class="fruit1">
+
+                    <a href="javascript:;" class="fruit2">
+                         <img src="images/indeximages/${json[i].img}" class="jiagou1"/>    </a>      
+                        <a href="javascript:;" id="jia-gou">${json[i].jiagou}</a>                       
+
+                   
+					<p class="zhushi" title="${json[i].title} ">${json[i].zhushi}</p>
+					<p class="cuxiaojiege">${json[i].cuxiaojiege}</p>
+					
 				</li>`
 	}
 	$(".tab-goodsSail-two").html(val);
@@ -254,14 +264,20 @@ function a(){
 	$(".tab-goodsSail-two .jiagou1").each(function(){
 		$(this).mouseenter(function(){
 			$(this).parent().parent().find("#jia-gou")
-                .css({"display":"block"})
+			       .fadeIn(500)
+                /*.animate({"top":134},500,function(){
+                	$(this).css("display","block")
+                })*/
 		})                 
  })
 
  $(".tab-goodsSail-two .jiagou1").each(function(){
-		$(this).mouseout(function(){
+		$(this).mouseleave(function(){
 			$(this).parent().parent().find("#jia-gou")
-                .css({"display":"none"})
+			       .fadeOut(500)
+                /*.animate({"top":134},500,function(){
+                	$(this).css("display","none")
+                })*/
 		})                 
  })
 }
@@ -271,46 +287,51 @@ ajaxGet("json/index2.json",function(res){
 	 json = eval(res);
 	var str="";
 	for(var i = 0; i<json.length;i++){
-		str +=`<li class="fruit">
-					<a href="javascript:;">
-						<img src="images/indeximages/${json[i].img}" class="jiagou1"/>
-						</a>
-						<p class="zhushi" title="广西新鲜水果 百香果鸡蛋果 中果 8斤52元 包邮 ">${json[i].zhushi}</p>
-						<p class="cuxiaojiege">${json[i].cuxiaojiege}</p>
-						<div id="jia-goua">
-							<a href="javascript:;">${json[i].jiagou}</a>
-						</div>
+		str +=`<li class="fruit1">
+
+                    <a href="javascript:;" class="fruit2">
+                         <img src="images/indeximages/${json[i].img}" class="jiagou1"/>    </a>      
+                        <a href="javascript:;" id="jia-gou">${json[i].jiagou}</a>                       
+
+                   
+					<p class="zhushi" title="${json[i].title}">${json[i].zhushi}</p>
+					<p class="cuxiaojiege">${json[i].cuxiaojiege}</p>
+					
 				</li>`
 	}
+	
 	$(".tab-goodsSail-second").html(str);
 	b();
 })
 function b(){
- $(".tab-goodsSail-second .jiagou1").mouseenter(function(){
- 	      $("#jia-goua").css({display:"block"}) 
- 	                   .parent()
- 	                   .siblings()
- })
- $(".tab-goodsSail-second .jiagou1").mouseleave(function(){
- 	      $("#jia-goua").css({display:"none"}) 
- 	                   .parent()
- 	                   .siblings()
+ $(".tab-goodsSail-second .jiagou1").each(function(){
+ 	$(this).mouseenter(function(){
+ 		$(this).parent().parent().find("#jia-gou")  
+ 		       .fadeIn(500)
+ 	})
+ 	$(this).mouseleave(function(){
+ 		$(this).parent().parent().find("#jia-gou")  
+ 		       .fadeOut(500)
+ 	})
+ 	
  })
 }
+
  //三楼
  ajaxGet("json/index3.json",function(res){
 	 var json = JSON.parse(res)
 	var str="";
 	for(var i = 0; i<json.length;i++){
-		str +=`<li class="fruit">
-					<a href="javascript:;">
-						<img src="images/indeximages/${json[i].img}" class="jiagou1"/>
-						</a>
-						<p class="zhushi" title="广西新鲜水果 百香果鸡蛋果 中果 8斤52元 包邮 ">${json[i].zhushi}</p>
-						<p class="cuxiaojiege">${json[i].cuxiaojiege}</p>
-						<div id="jia-goub">
-							<a href="javascript:;">${json[i].jiagou}</a>
-						</div>
+		str +=`<li class="fruit1">
+
+                    <a href="javascript:;" class="fruit2">
+                         <img src="images/indeximages/${json[i].img}" class="jiagou1"/>    </a>      
+                        <a href="javascript:;" id="jia-gou">${json[i].jiagou}</a>                       
+
+                   
+					<p class="zhushi" title="${json[i].title}">${json[i].zhushi}</p>
+					<p class="cuxiaojiege">${json[i].cuxiaojiege}</p>
+					
 				</li>`
 	}
 	$(".tab-goodsSail-third").html(str);
@@ -318,15 +339,16 @@ function b(){
 })
 function c(){
 
- $(".tab-goodsSail-third .jiagou1").mouseenter(function(){
- 	      $("#jia-goub").css({display:"block"}) 
- 	                   .parent()
- 	                   .siblings()
- })
- $(".tab-goodsSail-third .jiagou1").mouseleave(function(){
- 	      $("#jia-goub").css({display:"none"}) 
- 	                   .parent()
- 	                   .siblings()
+ $(".tab-goodsSail-third .jiagou1").each(function(){
+ 	$(this).mouseenter(function(){
+ 		$(this).parent().parent().find("#jia-gou")  
+ 		       .fadeIn(500)
+ 	})
+ 	$(this).mouseleave(function(){
+ 		$(this).parent().parent().find("#jia-gou")  
+ 		       .fadeOut(500)
+ 	})
+ 	
  })
  	
 }
@@ -335,15 +357,16 @@ function c(){
 	 var json = JSON.parse(res)
 	var str="";
 	for(var i = 0; i<json.length;i++){
-		str +=`<li class="fruit">
-					<a href="javascript:;">
-						<img src="images/indeximages/${json[i].img}" class="jiagou1"/>
-						</a>
-						<p class="zhushi" title="广西新鲜水果 百香果鸡蛋果 中果 8斤52元 包邮 ">${json[i].zhushi}</p>
-						<p class="cuxiaojiege">${json[i].cuxiaojiege}</p>
-						<div id="jia-gouc">
-							<a href="javascript:;">${json[i].jiagou}</a>
-						</div>
+		str +=`<li class="fruit1">
+
+                    <a href="javascript:;" class="fruit2">
+                         <img src="images/indeximages/${json[i].img}" class="jiagou1"/>    </a>      
+                        <a href="javascript:;" id="jia-gou">${json[i].jiagou}</a>                       
+
+                   
+					<p class="zhushi" title="${json[i].title}">${json[i].zhushi}</p>
+					<p class="cuxiaojiege">${json[i].cuxiaojiege}</p>
+					
 				</li>`
 	}
 	$(".tab-goodsSail-fourth").html(str);
@@ -351,15 +374,16 @@ function c(){
 })
 function d(){
 
- $(".tab-goodsSail-fourth .jiagou1").mouseenter(function(){
- 	      $("#jia-gouc").css({display:"block"}) 
- 	                   .parent()
- 	                   .siblings()
- })
- $(".tab-goodsSail-fourth .jiagou1").mouseleave(function(){
- 	      $("#jia-gouc").css({display:"none"}) 
- 	                   .parent()
- 	                   .siblings()
+ $(".tab-goodsSail-fourth .jiagou1").each(function(){
+ 	$(this).mouseenter(function(){
+ 		$(this).parent().parent().find("#jia-gou")  
+ 		       .fadeIn(500)
+ 	})
+ 	$(this).mouseleave(function(){
+ 		$(this).parent().parent().find("#jia-gou")  
+ 		       .fadeOut(500)
+ 	})
+ 	
  })
  	
 }
@@ -432,3 +456,6 @@ $(".shoucang").mouseleave(function(){
 	$(".shoucang").css({"background":"url(images/indeximages/sc.png)"})
 	$(".sc2").css({"display":"none"})
 })
+
+
+

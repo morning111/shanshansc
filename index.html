@@ -5,7 +5,8 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href=""/>
 		<link rel="stylesheet" type="text/css" href="css/index1.css"/>
-	
+		<script src="js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<!--header-->
@@ -228,53 +229,34 @@
 		</div>
 		<!--详情部分-->
 	<div id="main-cuxiao" class="clearfix">
-			<ul class="yhtm">
-				<li class="first-child active">
+		<ul class="time">
+			<ul class="yhtm clearfix">
+				<!--<li class="first-child active">
 					<a href="javascript:;">热卖商品</a>
 				</li>
 				<li class="second-child">
 					<a href="javascript:;">促销优惠</a>
-				</li>
-					<li class="third-child">
-						<span class="shengyu">热卖商品</span>
-						<span class="tian">促销优惠</span>
-						<span class="day">剩余</span>
-						<span class="shi">00</span>
-						<span class="day">天</span>
-						<span class="fen">00</span>
-						<span class="hour">时</span>
-						<span class="miao">00</span>
-						<span class="minite">秒</span>
-						<span class="timeover">结束</span>
-					</li>				
+				</li>--> 			
 			</ul>
-			<ol class="tab-goodsSail">
-				<li class="main selected">
+			<div class="time-one">
+					<span class="day">剩余</span>
+					<span class="shi">00</span>
+					<span class="day">天</span>
+					<span class="fen">00</span>
+					<span class="hour">时</span>
+					<span class="miao">00</span>
+					<span class="minite">秒</span>
+					<span class="timeover">结束</span>
+			</div>
+		</ul>
+			<ol class="tab-goodsSail clearfix">
+				<!--<li class="main selected">
 								<a href="javascript:;">
 								<img src="images/indeximages/small_201709041718352126.jpg"/>
 							    </a>
 							    <p class="zhushi">山山牌 白酒 山哈酒 竹筒酒 28度 畲乡特产 厂家直销 包邮 500ml</p>
 							    <p class="cuxiaojiege">"促销价：<span>￥45.00</span></p>
-							</li>
-				<!--<ol class="tab-goodsSail-tab">
-					<li style="display:block;" class="ff">
-						<ol class="tab-goodsSail-one">
-							<li class="tab-goodsSail-one1">
-							</li>
-						</ol>
-					</li>-->
-					<!--<li class="ff">
-						<ol class="tab-goodsSail-two">
-							<li class="tab-goodsSail-one2">
-								<a href="javascript:;">
-								<img src="images/indeximages/${json[i].img}"/>
-							    </a>
-							    <p class="zhushi">${json[i].zhushi}</p>
-							    <p class="cuxiaojiege">${json[i].cuxiaojiege}<span>${json[i].shoujia}</span></p>
-							</li>
-						</ol>						
-					</li>-->
-				<!--</ol>-->
+						</li>-->				
 			</ol>
 			<div id="main-right">
 				<div id="main-right-top">
@@ -310,6 +292,7 @@
 				<div id="liebiao">
 					<img src="images/indeximages/SHANSHAN_IMG_shanshan_1_201707131017224444.jpg"/>
 					<ul class="tab-goodsSail-two">
+						
 					</ul>
 				</div>
 				<div id="fist-floor-right">
@@ -621,7 +604,7 @@
 		
 	</body>
 </html>
-<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+
 <script type="text/javascript" src="js/ajax.js">
 	
 </script>
