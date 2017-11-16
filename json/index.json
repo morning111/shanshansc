@@ -1,0 +1,23 @@
+{ 
+	
+	   "tab-goodsSail-one":{
+		   "name":"热卖商品",
+		   "tab-goodsSail-one1":
+	[
+	{"img":"small_201610140916165112.jpg","zhushi":"农民野生淡水鱼干即食鲤鱼干景宁特产干货特色美食礼盒装1000g","cuxiaojiege":"促销价：","shoujia":"￥200.00"},
+	{"img":"small_201610201930505348.jpg","zhushi":"畲峡谷石斛正宗铁皮石斛干条100g 鲜条加工 景宁特产","cuxiaojiege":"促销价：","shoujia":"￥268.00"},
+	{"img":"small_201606081444235742.jpg","zhushi":"景宁特产山岗野花百花土蜂蜜500g","cuxiaojiege":"促销价：","shoujia":"￥118.00"}           
+    ]
+	   },
+	"tab-goodsSail-one":{
+		"name":"促销特惠",
+		 "tab-goodsSail-one1":[
+	{"img":"small_201606081054083145.jpg","zhushi":"景宁特产 金信食用菌干货礼盒礼包花菇礼盒过节送礼佳品盒装500g","cuxiaojiege":"促销价：","shoujia":"￥138.00"},
+	{"img":"small_201606081044077391.jpg","zhushi":"景宁特产食用菌干货礼盒礼包新山珍礼盒过节送礼佳品1000g","cuxiaojiege":"促销价：","shoujia":"￥140.00"},
+	{"img":"small_201606131140545507.jpg","zhushi":"景宁特产畲艺坊纯手工编织纳底布鞋千层底布鞋老北京布鞋民族女鞋 码数","cuxiaojiege":"促销价：","shoujia":"￥220.00"},
+	{"img":"small_201606131146379480.jpg","zhushi":"景宁特产高山农家自种黄豆15年新黄豆非转基因500g豆浆专用","cuxiaojiege":"促销价：","shoujia":"￥18.00"}            
+		 ]
+	}
+}	 
+
+

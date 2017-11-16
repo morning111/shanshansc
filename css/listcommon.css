@@ -1,0 +1,283 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input, figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a, u {
+  text-decoration: none;
+}
+
+b, strong {
+  font-weight: 100;
+}
+
+i, em {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+img {
+  display: block;
+  border: 0;
+}
+
+input {
+  outline: none;
+}
+
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+#listHeader {
+  height: 30px;
+  background: #f7f7f7;
+}
+#listHeader ul {
+  width: 665px;
+  height: 30px;
+  float: right;
+  margin-right: 46px;
+}
+#listHeader ul li {
+  float: left;
+}
+#listHeader ul li .gouwu {
+  font-size: 14px;
+  color: #666;
+  line-height: 30px;
+  font-weight: 700px;
+}
+#listHeader ul li a {
+  font-size: 14px;
+  color: #666;
+  line-height: 30px;
+  font-weight: 700px;
+  margin-left: 10px;
+  margin-right: 7px;
+}
+#listHeader ul li img {
+  float: right;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+#listHeader ul .dingdan {
+  position: relative;
+  cursor: pointer;
+  background: url(../images/loginimages/shu.jpg) no-repeat 0 10px;
+}
+#listHeader ul .dingdan .dingdan_2 {
+  background: #fff;
+  color: #24313C;
+  display: none;
+  position: absolute;
+}
+#listHeader ul .dingdan .dingdan_1:hover .dingdan_2 {
+  border: 1px solid #dfdfdf;
+  display: block;
+  margin: 0 auto;
+  white-space: nowrap;
+  width: 110px;
+  height: auto;
+  font-size: 12px;
+}
+#listHeader ul .che {
+  background: url(../images/listimages/cart.png) no-repeat 0 10px;
+}
+#listHeader ul .che a {
+  margin-left: 15px;
+}
+#listHeader ul .che span {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0C9509;
+}
+#listHeader ul .shoucangjia {
+  position: relative;
+  cursor: pointer;
+  background: url(../images/loginimages/shu.jpg) no-repeat 0 10px;
+}
+#listHeader ul .shoucangjia .shoucangjia_2 {
+  background: #fff;
+  color: #24313C;
+  display: none;
+  position: absolute;
+}
+#listHeader ul .kehufuwu {
+  position: relative;
+  cursor: pointer;
+  background: url(../images/loginimages/shu.jpg) no-repeat 0 10px;
+}
+#listHeader ul .kehufuwu .kehufuwu_2 {
+  background: #fff;
+  color: #24313C;
+  display: none;
+  position: absolute;
+}
+#listHeader ul .shoucangjia .shoucangjia_1:hover .shoucangjia_2 {
+  border: 1px solid #dfdfdf;
+  display: block;
+  margin: 0 auto;
+  white-space: nowrap;
+  width: 110px;
+  height: auto;
+  font-size: 12px;
+}
+#listHeader ul .kehufuwu .kehufuwu_1:hover .kehufuwu_2 {
+  border: 1px solid #dfdfdf;
+  display: block;
+  margin: 0 auto;
+  width: 110px;
+  height: auto;
+  font-size: 12px;
+}
+
+/*footer*/
+#footer {
+  width: 990px;
+  height: 370px;
+  margin: auto;
+}
+#footer .left_1, #footer .left_2, #footer .right_1, #footer .right_2 {
+  width: 197px;
+  height: 130px;
+  margin-top: 42px;
+  margin-bottom: 20px;
+  float: left;
+}
+#footer .left_1 h6, #footer .left_2 h6, #footer .right_1 h6, #footer .right_2 h6 {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 13px;
+  color: #333;
+}
+#footer .left_1 ul, #footer .left_2 ul, #footer .right_1 ul, #footer .right_2 ul {
+  border-right: 1px dashed #e6e6e6;
+}
+#footer .left_1 ul li, #footer .left_2 ul li, #footer .right_1 ul li, #footer .right_2 ul li {
+  background: url(../images/loginimages/dot.jpg) no-repeat 6px;
+  margin-left: 60px;
+}
+#footer .left_1 ul li a, #footer .left_2 ul li a, #footer .right_1 ul li a, #footer .right_2 ul li a {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #000;
+}
+#footer .right_2 ul {
+  border-right: none;
+}
+#footer .center {
+  width: 130px;
+  height: 130px;
+  margin-top: 42px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  float: left;
+}
+#footer .center p a {
+  font-size: 12px;
+  color: #666;
+}
+#footer .bottom_1 {
+  width: 990px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#footer .bottom_1 a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+}
+#footer .bottom_1 .lianjie {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#footer .bottom_2 p {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+/*right*/
+#rightButton {
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  height: 268px;
+  z-index: 9999;
+  display: block;
+  cursor: pointer;
+}
+#rightButton .xuanfu {
+  width: 66px;
+  height: 268px;
+  position: relative;
+}
+#rightButton .xuanfu .backTop {
+  z-index: 99999;
+  margin-top: -335px;
+}
+#rightButton .xuanfu .backTop .backTop_1 {
+  background: url("../images/loginimages/gtop.png") no-repeat;
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+  display: block;
+}
+#rightButton .xuanfu .kefu {
+  background: url("../images/loginimages/kf.png") no-repeat;
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+#rightButton .xuanfu .rightCart {
+  background: url("../images/loginimages/gw.png") no-repeat;
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+#rightButton .xuanfu .rightCart .num {
+  width: 20px;
+  height: 20px;
+  background: #d00;
+  position: absolute;
+  font-size: 16px;
+  text-align: center;
+  margin-left: -10px;
+  margin-top: 10px;
+  color: #fff;
+  line-height: 20px;
+}
+#rightButton .xuanfu .erweima {
+  background: url("../images/loginimages/wx.png") no-repeat;
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+#rightButton .xuanfu .shoucang {
+  background: url("../images/loginimages/sc.png") no-repeat;
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+/*# sourceMappingURL=listcommon.css.map */

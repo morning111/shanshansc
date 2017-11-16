@@ -1,0 +1,361 @@
+#logoSign{
+    width:1190px;
+    height:70px;
+    margin:0 auto;
+    h1 .logo{
+        float: left;
+    }
+    #soutext{
+        width:514px;
+        height:28px;
+        border:1px solid #666;
+        margin-left:420px;
+        margin-top:20px;
+        float: left;
+    }
+    .shishi{
+        width:86px;
+        height:30px;
+        background:#1c6915;
+        margin-top:20px;
+        border:none;
+        float: left;
+        font-size:18px;
+        letter-spacing: 5px;
+        color:#fff;
+    }
+}
+/*nav*/
+#listNav{
+    height: 30px;
+    background: #2c8022;
+    .list-ul-1{
+        margin-left:70px;
+        li{
+            height: 30px;
+            float: left;
+            .all{
+                font-size:14px;
+                color:#fff;
+                line-height:30px;
+                font-weight: 800;
+                padding-left:5px;
+            }
+            i{
+                font-size:14px;
+                color:#fff;
+                line-height:30px;
+                padding-left:10px;
+            }
+            .ul-sou{
+                width:160px;
+                height:20px;
+                border:none;
+                border-top-left-radius:10px ;
+                border-bottom-left-radius:10px ;
+                background: #f3f3f3;
+                float: left;
+                margin-top:5px;
+            }
+            .ul-suo{
+                width:20px;
+                height:20px; 
+                border:none;
+                border-top-right-radius:10px ;
+                border-bottom-right-radius:10px ;
+                float: left;
+                margin-top:5px;
+                background: #f3f3f3;
+            }
+        }
+        li:nth-child(3){
+            padding-right:25px;
+            background:url(../images/listimages/20130325_tamll_03.jpg)no-repeat 37px 7px;
+            i{
+                padding-left:20px;
+            }
+        }
+        
+    }
+}
+/*nav-all*/
+#nav-all{
+    width:1190px;
+    height:155px;
+    margin:10px auto;
+    .pinpai{
+        width:1190px;
+        height:40px;
+        border:2px solid #b9d2b4;
+        li{
+            float: left;
+            .same{
+                 font-size:14px;
+                color:#000;
+                line-height:35px;
+                padding-left:10px;
+                display: block;
+                width:120px;
+                height: 40px;
+                background:#ebf8eb;
+            }
+            .same-1{
+                font-size:14px;
+                color:#666;
+                line-height:40px;
+                padding:0 12px;
+            }
+            .duoxuan{
+                font-size:14px;
+                color:#666;
+                line-height:18px;
+                text-align: center;
+                padding:0 12px;
+                display: block;
+                width:47px;
+                height:18px;
+                margin-left:815px;
+                margin-top:10px;
+                border:1px solid #ccc;
+                background:#ebf8eb;
+            }
+            .same-2{
+                font-size:14px;
+                color:#666;
+                line-height:40px;
+                padding:0 12px;
+            }
+        } 
+              
+    }
+    .pinpai3{
+        height:69px;
+        width:1190px;
+        border:2px solid #b9d2b4;
+        li{
+            float: left;
+            .same{
+                 font-size:14px;
+                color:#000;
+                line-height:35px;
+                padding-left:10px;
+                display: block;
+                width:120px;
+                height: 69px;
+                background:#ebf8eb;
+            }
+            .same-1{
+                font-size:14px;
+                color:#666;
+                line-height:40px;
+                padding:0 20px;
+            }
+            .duoxuan{
+                font-size:14px;
+                color:#666;
+                line-height:18px;
+                text-align: center;
+                padding:0 12px;
+                display: block;
+                width:47px;
+                height:18px;
+                margin-left:815px;
+                margin-top:10px;
+                border:1px solid #ccc;
+                background:#ebf8eb;
+            }
+            .same-2{
+                font-size:14px;
+                color:#666;
+                line-height:40px;
+                padding:0 12px;
+            }
+        } 
+    }
+}
+/*nav-last*/
+#chazhaobaobei{
+    width:1190px;
+    height:35px;
+    background: #ebf8eb;
+    margin:10px auto;
+    .address{
+        width:82px;
+        height:24px;
+        margin-right:10px;
+        margin-left:-213px;
+        margin-top:5px;
+        resize: none;
+        float: left;
+    }
+    .shunxu{
+        width:124px;
+        height:24px;
+        resize: none;
+         margin-top:5px;
+        margin-left:-115px;       
+        float: left;
+    }
+    #xiaoliang{
+        width:45px;
+        height:24px;
+        margin-left:10px;
+        float: left;
+        margin-top:5px;
+        background:#fff url(../images/listimages/123.jpg)no-repeat 35px 8px;
+    }
+    #price-1{
+        width:45px;
+        height:24px;
+        float: left;
+        margin-top:5px;
+        background:#fff url(../images/listimages/1234.jpg)no-repeat 35px 8px;
+    }
+    #from{
+        width:62px;
+        height:24px;
+        float: left;
+        margin-left:10px;
+        margin-top:5px;
+    }
+    .sub{
+        width:10px;
+        height:1px;
+        margin-top:15px;
+        background:#666;
+    }
+    #anniu{
+        width:15px;
+        height:15px;
+        border:1px solid #666;
+        position: relative;
+        top:10px;
+        left:-170px;
+        z-index:100;
+    }
+    #baoyou{
+        width:172px;
+        height:24px;
+        float: left;
+       margin-left:10px;
+        margin-top:5px;
+    }
+}
+/*particular*/
+#particular-list{
+    width:1190px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;    
+    #particular-listAll{
+        height:386px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+       
+        img{
+            width:215px;
+            height:222px;
+            border:1px solid #666;
+        }
+        #shiyi{
+            width:215px;
+            height:106px;
+            .sail-price{
+                font-size:10px;
+                color:#dd1f1f;
+                float: left;
+            }
+            .unit-price{
+                display: block;
+                width:87px;
+                height:20px;
+                border:1px solid #e8f5e4;
+                background: #f0f8ed;
+                font-size:10px;
+                text-align: center;
+                line-height: 20px;
+                color:#838383;
+                float: right;
+            }
+            .state{
+                float: left;
+                font-size:12px;
+                color:#666;
+                 cursor: pointer;
+            }
+            .sales-volume{
+                float: left;
+                font-size:12px;
+                color:#333;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .volume-num{
+                font-size:12px;
+                color:#e2adab;
+               }
+               .upright{
+                display: block;
+                width:1px;
+                height:10px;
+                background: #333;
+                position: relative;
+                top:4px;
+                left:1px;
+                margin:0 10px;
+               }
+               .evaluate{
+                   font-size:12px;
+                   color:#56839f;
+               }              
+               
+            } 
+             .cate{
+                 margin-top:5px;
+                   font-size:14px;
+                   color:#797966;
+                   float: left;              
+               }  
+               .bac-msg{
+                   display: block;
+                   width:65px;
+                   height:16px;
+                   border-radius: 2px;
+                   border:1px solid #ff9b39;
+                   background: url("../images/listimages/sstalking-ico.gif")no-repeat;
+                   background-position: -1px  -3px;
+                   margin:5px;                  
+                   float: left;
+               }       
+        }
+    }
+}
+/*sousuo*/
+#hunt{
+    width:1190px;
+    height:92px;
+    margin:180px auto;
+    background:#efefef;
+    #hunt-1{
+        width:512px;
+        height:29px; 
+        border:none;
+        border:1px solid #587154;
+        margin-left:296px;
+        margin-top:32px;
+    }
+    .hunt-2{
+        width:88px;
+        height:32px; 
+        border:none;
+        border:1px solid #587154;
+        background: #134a0e;
+        font-size:16px;
+        color:#fff;
+        text-align: center;
+        line-height: 32px;
+    }
+}

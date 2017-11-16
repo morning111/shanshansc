@@ -1,0 +1,149 @@
+@charset "utf-8";
+			#all{
+				height:684px;
+				background: #f7f7f7;
+				border-top:2px solid #fff;
+				border-bottom:3px solid #e5e5e5;
+			}
+			#denglujiemian{
+				width: 990px;
+				height: 110px;				
+				margin:auto;
+			}
+			#denglujiemian img{
+				margin:10px;
+				float:left;
+			}
+			#denglujiemian span{
+				display: block;
+				height:50px;
+				width:2px;
+				background: #e0e0e0;
+				margin-top:10px;
+				margin-left: 10px;
+				margin-right:5px;
+				float: left;
+			}
+			#denglujiemian h5{
+				font-size:24px;
+				color:#333;
+				margin-top:25px;
+				float:left;
+			}
+			
+			#nav{
+				width:990px;
+				height:370px;
+				margin:auto;
+				
+			}
+			#nav form{
+				width:990px;
+				height:370px;
+				float:left;
+				border:16px solid #eee;
+				background: #fff;
+			}
+			#nav form #leftTop{
+				width:366px;
+				height:248px;
+				margin-left:92px;
+				float:left;
+			}
+			#nav form #leftTop i{
+				color:red;
+				margin-top:25px;
+			}
+			#nav form #leftTop label{
+				font-size:14px;
+				color:#999;
+				text-align: right;
+				margin-top:25px;
+			}
+			#nav form #leftTop input{
+				width:268px;
+				height:40px;
+				border:1px solid #999;
+				text-align:left;
+				margin-top:25px;
+				margin-left: 5px;
+			}
+			#nav form #leftTop #name{
+				background: url(../images/loginimages/one4.jpg) no-repeat 245px center;
+			}
+			#nav form #leftTop #pwd{
+				
+				background: url(../images/loginimages/icon-lock.jpg) no-repeat 245px center;
+			}
+			#nav form #leftTop #wangji{
+				font-size:14px;
+				color:#005aa0;
+				margin-top:17px;
+				margin-left:242px;
+			}
+			#nav form #leftTop #btn{
+				width:270px;
+				height:42px;
+				background:#24c336;
+				border-radius: 5px;
+				border:none;
+				margin-top:20px;
+				font-size:16px;
+				letter-spacing: 15px;
+				text-align: center;
+				line-height: 42px;
+				color:#fff;
+				margin-left:80px;
+			}
+			#nav form #leftTop #tip1,#tip2,#tip3{
+				width:268px;
+                height:40px;
+                border:1px solid #999;
+                text-align:left;
+                line-height: 40px;
+                position: absolute;
+                left:334px;
+                top:127px;
+                background: #ccc;
+                display: none;
+			}
+			#nav form #leftTop #mianfeizhuce{
+				font-size:14px;
+				color:#005aa0;
+				margin-top:27px;
+				margin-left:270px;
+			}
+			#nav #qita{
+				width:366px;
+				height:80px;
+				margin-top:10px;
+				float:left;
+			}
+			#nav #qita #qita_1{
+				font-size:14px;
+				color:#666;
+				margin-bottom:26px;
+			}
+			#nav #qita #hezuo{
+				display: flex;
+				flex-direction: row;
+				flex-wrap:nowrap;
+				justify-content: flex-start;
+				
+			}
+			
+			#nav #qita #first_1{
+				font-size:14px;
+				color:#005aa0;
+				align-self: flex-end;
+			}
+			#nav #qita #hezuo a{
+				margin-right:10px;
+			}
+			#nav #right{				
+				height:338px;
+				float: right;
+				margin-top:15px;
+				margin-right:15px;
+			}
+			

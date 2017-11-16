@@ -1,0 +1,547 @@
+/*daohanglan*/
+#grid {
+  height: 110px;
+  border-top: 1px solid #eee;
+}
+#grid #gridLogo {
+  width: 370px;
+  height: 82px;
+  padding-left: 44px;
+  margin-top: 28px;
+  float: left;
+}
+#grid #gridLogo img {
+  float: left;
+}
+#grid #gridLogo span {
+  width: 2px;
+  height: 40px;
+  background: #a3d39d;
+  margin: 12px;
+  float: left;
+}
+#grid #gridLogo .zimeiti {
+  font-size: 18px;
+  color: #7fc176;
+  margin-top: 20px;
+  float: left;
+}
+#grid #sousuo {
+  width: 544px;
+  height: 78px;
+  margin-left: 44px;
+  margin-top: 32px;
+  float: left;
+}
+#grid #sousuo .sousuo_1 {
+  width: 406px;
+  height: 30px;
+  border: 3px solid #45b035;
+  border-top: 2px solid #45b035;
+  float: left;
+}
+#grid #sousuo button {
+  width: 88px;
+  height: 35px;
+  border: none;
+  background: #45b035;
+  float: left;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800px;
+  text-align: center;
+  line-height: 35px;
+}
+#grid #sousuo ul {
+  width: 494px;
+  height: 17px;
+  margin-top: 5px;
+  float: left;
+}
+#grid #sousuo ul li:first-child {
+  font-size: 12px;
+  color: #333;
+  float: left;
+}
+#grid #sousuo ul li a {
+  font-size: 12px;
+  color: #666;
+  margin-right: 13px;
+  float: left;
+}
+#grid .rightMyShanshan {
+  width: 254px;
+  height: 78px;
+  margin-top: 35px;
+  float: left;
+}
+#grid .rightMyShanshan #myShanshan {
+  width: 38%;
+  height: 29px;
+  background: #fafafa url(../images/particularsimages/icon-meber.jpg) no-repeat 10px 5px;
+  border: 2px solid #eee;
+  float: left;
+}
+#grid .rightMyShanshan #myShanshan a {
+  font-size: 12px;
+  color: #666;
+  font-weight: 800;
+  line-height: 29px;
+  margin-left: 32px;
+}
+#grid .rightMyShanshan #myCart {
+  width: 43%;
+  height: 29px;
+  background: #fafafa url(../images/particularsimages/icon-buy2.png) no-repeat 10px;
+  border: 2px solid #eee;
+  margin-left: 12px;
+  float: left;
+}
+#grid .rightMyShanshan #myCart a {
+  font-size: 12px;
+  color: #666;
+  font-weight: 800;
+  line-height: 29px;
+  margin-left: 42px;
+  float: left;
+}
+#grid .rightMyShanshan #myCart div {
+  color: #fff;
+  font-weight: 700;
+  width: 12px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  background: #45b035;
+  margin: 5px;
+  float: left;
+}
+
+/*nav*/
+#nav-cart {
+  height: 30px;
+  background: #49a03d;
+}
+#nav-cart ul {
+  width: 1055px;
+  height: 30px;
+  margin-left: 10px;
+}
+#nav-cart ul li {
+  float: left;
+  width: 123px;
+  height: 20px;
+  margin-top: 5px;
+  border-right: 1px solid #666;
+}
+#nav-cart ul li a {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 800;
+  margin-left: 32px;
+  text-align: center;
+}
+#nav-cart ul li:first-child a {
+  margin-left: 54px;
+}
+#nav-cart ul li:last-child {
+  width: 140px;
+}
+
+/*message-a*/
+#message {
+  width: 1190px;
+  height: 24px;
+  background: #e4e4e4;
+  margin: 30px auto;
+}
+#message li {
+  float: left;
+}
+#message li .maimaimai-cart {
+  display: block;
+  width: 225px;
+  height: 24px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  font-weight: 800;
+  margin-left: 11px;
+  background: url(../images/cartimages/nav_li_span3.gif) no-repeat 207px;
+}
+#message li .maimaimai-cart1 {
+  display: block;
+  width: 225px;
+  height: 23px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  font-weight: 800;
+  background: #009900 url(../images/cartimages/nav_li_span2.gif) no-repeat 207px;
+}
+#message li .maimaimai-cart5 {
+  display: block;
+  width: 225px;
+  height: 23px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+/*caozuo*/
+#caozuo-cart {
+  width: 1190px;
+  height: 42px;
+  background: #f2fff0;
+  border-top: 3px solid #009900;
+  margin: 30px auto;
+}
+#caozuo-cart li {
+  margin-top: 14px;
+  float: left;
+}
+#caozuo-cart li #check-all {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #666;
+  margin-left: 15px;
+  float: left;
+}
+#caozuo-cart li .check-all1 {
+  font-size: 12px;
+  color: #404040;
+  margin-left: 15px;
+  float: left;
+}
+#caozuo-cart li .del-some {
+  font-size: 12px;
+  color: #666;
+  margin-left: 25px;
+  float: left;
+}
+#caozuo-cart li .shop {
+  font-size: 12px;
+  color: #404040;
+  margin-left: 120px;
+  float: left;
+}
+#caozuo-cart li .jifen-cart {
+  font-size: 12px;
+  color: #404040;
+  margin-left: 170px;
+  float: left;
+}
+#caozuo-cart li .price-cart {
+  font-size: 12px;
+  color: #404040;
+  margin-left: 70px;
+  float: left;
+}
+#caozuo-cart li .num-cart {
+  font-size: 12px;
+  color: #404040;
+  margin-left: 85px;
+  float: left;
+}
+#caozuo-cart li .discounts-cart {
+  font-size: 12px;
+  color: #404040;
+  margin-left: 100px;
+  float: left;
+}
+#caozuo-cart li .sum-cart {
+  font-size: 12px;
+  color: #404040;
+  margin-left: 92px;
+  float: left;
+}
+
+/*cart*/
+#cart-amount {
+  width: 1190px;
+  height: 500px;
+  background: yellow;
+  margin: 0 auto;
+}
+#cart-amount #cart-amount-1 {
+  width: 1190px;
+  height: auto;
+  float: left;
+}
+#cart-amount #cart-amount-1 #shop-cart-1 {
+  width: 1190px;
+  margin: 20px auto;
+  margin-bottom: 20px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #shop-cart-1 #check-all {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #666;
+  margin-left: 15px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #shop-cart-1 #check-all1 {
+  font-size: 12px;
+  color: #333;
+  margin-left: 30px;
+  font-weight: 800;
+  float: left;
+}
+#cart-amount #cart-amount-1 #shop-cart-1 #shop-name {
+  font-size: 12px;
+  color: #666;
+  font-weight: 800;
+  margin-left: 5px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #shop-cart-1 .connect-cart-us {
+  width: 65px;
+  height: 15px;
+  border: 1px solid #ffc839;
+  margin-left: 10px;
+  border-radius: 2px;
+  background: #feda3a url(../images/cartimages/sstalking-ico.gif) no-repeat;
+  background-position: 0 -4px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods {
+  width: 1190px;
+  height: 80px;
+  background: #f2fff0;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #left-cart-goods {
+  width: 376px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #left-cart-goods #cart-shop-select {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #666;
+  margin: 34px 24px 0 15px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #left-cart-goods img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #eee;
+  margin-top: 10px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #left-cart-goods .scan-bigPic {
+  font-size: 12px;
+  color: #000;
+  margin-top: 63px;
+  margin-left: -50px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #left-cart-goods .account-for {
+  font-size: 12px;
+  color: #000;
+  padding-top: 7px;
+  margin-left: 10px;
+  width: 250px;
+  white-space: wrap;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #left-cart-goods .specification {
+  font-size: 12px;
+  color: #000;
+  margin-left: 10px;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #left-cart-goods #guarantee-1 {
+  font-size: 12px;
+  color: #000;
+  margin-left: 10px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #left-cart-goods .guarantee-2 {
+  width: 50px;
+  height: 16px;
+  background: url(../images/cartimages/bq.png) repeat 17px 1px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods {
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods .what-num {
+  font-size: 12px;
+  color: #000;
+  margin-top: 25px;
+  margin-left: 120px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods .del {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 10px;
+  margin-left: 80px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods .all-cart-total {
+  font-size: 12px;
+  color: #666;
+  margin-top: 30px;
+  margin-left: -47px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods .save-money {
+  width: 88px;
+  height: 22px;
+  margin-top: 50px;
+  margin-left: -64px;
+  background: #24C336;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  line-height: 22px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods .btnL {
+  width: 15px;
+  height: 15px;
+  margin-top: 25px;
+  margin-left: 65px;
+  margin-right: 5px;
+  border: 1px solid #eee;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  line-height: 15px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods .btnR {
+  width: 15px;
+  height: 15px;
+  margin-top: 25px;
+  margin-left: 5px;
+  border: 1px solid #eee;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  line-height: 15px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods #cart-num {
+  width: 35px;
+  height: 22px;
+  margin-top: 20px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods #promotion {
+  width: 60px;
+  height: 20px;
+  background: #ff5600;
+  font-size: 14px;
+  color: #fff;
+  float: left;
+  margin-top: 25px;
+  margin-left: 40px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods #money {
+  font-size: 12px;
+  color: #ff5600;
+  font-weight: 800;
+  margin-top: 25px;
+  margin-left: 80px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods #collect {
+  font-size: 12px;
+  color: #666;
+  font-weight: 700;
+  margin-top: 18px;
+  margin-left: 80px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods #collect {
+  font-size: 12px;
+  color: #666;
+  font-weight: 700;
+  margin-top: 18px;
+  margin-left: 80px;
+  float: left;
+}
+#cart-amount #cart-amount-1 #cart-shop-goods #right-cart-goods #del-cart {
+  font-size: 12px;
+  color: #666;
+  font-weight: 700;
+  margin-top: 35px;
+  margin-left: -22px;
+  float: left;
+}
+
+/*count*/
+#count-cart-jiesuan {
+  width: 1190px;
+  height: 36px;
+  background: #f3f3f3;
+  border: 1px solid #ccc;
+  margin: 5px auto;
+}
+#count-cart-jiesuan li {
+  margin-top: 10px;
+  float: left;
+}
+#count-cart-jiesuan li #check-all {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #666;
+  margin-left: 15px;
+  float: left;
+}
+#count-cart-jiesuan li .check-all1 {
+  font-size: 14px;
+  color: #333;
+  margin-left: 5px;
+  float: left;
+}
+#count-cart-jiesuan li .del-some {
+  font-size: 14px;
+  color: #666;
+  margin-left: 15px;
+  float: left;
+}
+#count-cart-jiesuan li .shop {
+  font-size: 14px;
+  color: #404040;
+  margin-left: 15px;
+  float: left;
+}
+#count-cart-jiesuan li #total {
+  font-size: 14px;
+  color: #ff4d13;
+  font-weight: 800;
+  float: left;
+}
+#count-cart-jiesuan li .settle-accounts {
+  width: 132px;
+  height: 36px;
+  margin-left: 10px;
+  border: none;
+  border: 2px solid #f17401;
+  background: #ff9900;
+  float: left;
+}
+#count-cart-jiesuan li .settle-accounts .settle-accounts1 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  line-height: 32px;
+  letter-spacing: 10px;
+}
+#count-cart-jiesuan li:nth-child(2) {
+  margin-left: 682px;
+}
+#count-cart-jiesuan li:nth-child(3) {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=cart.css.map */

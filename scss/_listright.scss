@@ -1,0 +1,103 @@
+#righttab{
+    position:fixed;
+    right:0;
+    bottom:80px;
+    width: 55px;
+    height:120px;
+     z-index: 9999;
+    cursor:pointer;
+    #xiaoshi{
+        width: 55px;
+        height:40px;
+        position:relative;
+        .hoverAppear{
+          position:absolute;
+          left: 0;
+          top: -35px;
+          background-position: 0 -83px;
+         width: 55px;
+         height: 35px;  
+         display: none;
+         
+        }
+        .zuoyanshen{
+           position:absolute;
+          left: 0;
+          top: 0;
+          background-position: 0 0;
+         width: 55px;
+         height: 40px;
+         .zuoyanshen:hover{
+             background-position: 55px 0;
+            }
+            .zuoyanshen:hover .hoverAppear{
+             display: block;
+            }
+        }
+        .surprise{
+            width:209px;
+            height:40px;
+            border:1px sollid #ccc;
+            position: absolute;
+            right:0;
+            top:0;
+        }
+    }
+}
+
+
+/*#rightButton{
+    
+    .xuanfu{
+        width:66px;
+        height:268px;
+        position:relative;
+        .backTop{
+            z-index: 99999;
+            margin-top:-335px;
+            .backTop_1{
+                background: url("../images/loginimages/gtop.png") no-repeat;
+                width:66px;
+                height:66px;
+                margin-top:1px;
+                display: block;
+            }
+        }
+        .kefu{
+            background: url("../images/loginimages/kf.png") no-repeat;
+            width:66px;
+            height:66px;
+            margin-top:1px;
+        }
+        .rightCart{
+                background: url("../images/loginimages/gw.png") no-repeat;
+                width:66px;
+                height:66px;
+                margin-top:1px;
+                .num{
+                width:20px;
+                height:20px;
+                background:#d00;
+                position: absolute;
+                font-size:16px;
+                text-align: center;
+                margin-left:-10px;
+                margin-top:10px;
+                color:#fff;
+                line-height: 20px;
+            }
+        }
+        .erweima{
+                background: url("../images/loginimages/wx.png") no-repeat;
+                width:66px;
+                height:66px;
+                margin-top:1px;
+        }
+       .shoucang{
+                background: url("../images/loginimages/sc.png") no-repeat;
+                width:66px;
+                height:66px;
+                margin-top:1px;
+        } 
+    }
+}*/

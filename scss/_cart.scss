@@ -1,0 +1,548 @@
+/*daohanglan*/
+#grid{
+    height:110px;
+    border-top: 1px solid #eee;  
+    #gridLogo{
+        width:370px;
+        height:82px;
+        padding-left:44px;
+        margin-top:28px;
+        float:left;
+        img{
+            float:left;
+        }
+        span{
+            width:2px;
+            height:40px;
+            background: #a3d39d;
+            margin:12px;
+            float: left;
+        }
+        .zimeiti{
+            font-size:18px;
+            color:#7fc176;
+            margin-top:20px;
+            float:left;
+        }        
+    }  
+    #sousuo{     
+        width:544px;
+        height:78px;
+        margin-left:44px;
+        margin-top:32px;
+        float:left;
+        .sousuo_1{
+            width:406px;
+            height:30px;                
+            border:3px solid #45b035;
+            border-top:2px solid #45b035;
+            float: left;
+        }
+        button{
+            width:88px;
+                height:35px;
+                border:none;
+                background: #45b035;
+                float: left;
+                color:#fff;
+                font-size:12px;
+                font-weight: 800px;
+                text-align: center;
+                line-height: 35px;               
+        }
+        ul{
+            width:494px;
+            height:17px;
+            margin-top:5px;
+            float: left;
+            li:first-child{
+                font-size:12px;
+                color:#333;
+                float: left;
+            }
+            li a{
+                font-size:12px;
+                color:#666;
+                margin-right:13px;
+                float:left;
+            }
+        }
+    } 
+     .rightMyShanshan{
+        width:254px;
+        height:78px;
+        margin-top:35px;
+        float:left;
+        #myShanshan{
+            width:38%;
+            height:29px;
+            background: #fafafa url(../images/particularsimages/icon-meber.jpg)no-repeat 10px 5px;
+            border:2px solid #eee;
+            float:left;
+            a{
+                font-size:12px;
+                color:#666;
+                font-weight: 800;
+                line-height: 29px;
+                margin-left:32px;
+            }
+        }
+            #myCart{
+            width:43%;
+            height:29px;
+            background: #fafafa url(../images/particularsimages/icon-buy2.png)no-repeat 10px;
+            border:2px solid #eee;
+            margin-left:12px;
+            float: left;
+            a{
+                font-size:12px;
+                color:#666;
+                font-weight: 800;
+                line-height: 29px;
+                margin-left:42px;
+                float: left;
+            }
+            div{
+                color: #fff;
+                font-weight: 700;
+                width:12px;
+                height:20px;
+                text-align: center;
+                line-height: 20px;
+                background: #45b035;
+                margin:5px;
+                float: left;
+            }
+        }
+    }     
+}
+/*nav*/
+#nav-cart{
+    height:30px;
+    background: #49a03d;
+    ul{
+        width:1055px;
+        height:30px;
+        margin-left:10px;
+        li{
+        float: left;
+        width:123px;
+        height:20px;
+        margin-top:5px;
+       border-right:1px solid #666;
+        a{
+            font-size:14px;
+            color:#fff;
+            font-weight: 800;
+            margin-left:32px;
+            text-align: center;
+        }
+    }
+        li:first-child a{
+            margin-left:54px;
+        }
+        li:last-child{
+            width:140px;
+        }
+    }    
+}
+/*message-a*/
+#message{
+    width:1190px;
+    height:24px;
+    background:#e4e4e4;
+    margin:30px auto;
+    li{
+       float: left;
+       .maimaimai-cart{
+           display: block;
+           width:225px;
+           height:24px;
+           font-size:12px;
+           color:#fff;
+           text-align: center;
+           line-height: 24px;
+           font-weight: 800;
+           margin-left:11px;
+           background:  url(../images/cartimages/nav_li_span3.gif)no-repeat 207px;
+       }   
+       .maimaimai-cart1{
+            display: block;
+            width:225px;
+            height:23px;
+            font-size:12px;
+            color:#fff;
+            text-align: center;
+            line-height: 24px;
+            font-weight: 800;
+         background:#009900  url(../images/cartimages/nav_li_span2.gif)no-repeat 207px;  
+        } 
+         .maimaimai-cart5{
+            display: block;
+            width:225px;
+            height:23px;
+            font-size:12px;
+            color:#fff;
+            text-align: center;
+            line-height: 24px;
+            font-weight: 800;
+         }
+    }   
+}
+/*caozuo*/
+#caozuo-cart{
+    width:1190px;
+    height:42px;
+    background: #f2fff0;
+    border-top:3px solid #009900;
+    margin:30px auto;
+    li{
+        margin-top:14px;
+        float: left;
+        #check-all{
+            width:16px;
+            height:16px;
+            border:1px solid #666;
+            margin-left:15px;
+            float: left;
+        }
+        .check-all1{
+            font-size:12px;
+            color:#404040;
+            margin-left:15px;
+            float: left;
+        }
+        .del-some{
+            font-size:12px;
+            color:#666;
+            margin-left:25px;
+            float: left;
+        }
+        .shop{
+            font-size:12px;
+            color:#404040;
+            margin-left:120px;
+             float: left;
+        }
+        .jifen-cart{
+            font-size:12px;
+            color:#404040;
+            margin-left:170px;
+             float: left;
+        }
+        .price-cart{
+            font-size:12px;
+            color:#404040;
+            margin-left:70px;
+             float: left;
+        }
+        .num-cart{
+            font-size:12px;
+            color:#404040;
+            margin-left:85px;
+             float: left;
+        }
+        .discounts-cart{
+            font-size:12px;
+            color:#404040;
+            margin-left:100px;
+             float: left;
+        }
+        .sum-cart{
+            font-size:12px;
+            color:#404040;
+            margin-left:92px;
+             float: left;
+        }
+    }
+}
+/*cart*/
+#cart-amount{
+    width:1190px;
+    height:500px;
+    background: yellow;
+    margin:0 auto;
+    #cart-amount-1{
+        width:1190px;
+        height:auto;    
+         float: left;
+        #shop-cart-1{
+            width:1190px;
+        margin:20px auto;
+        margin-bottom:20px;
+        float: left;
+        #check-all{
+            width:16px;
+            height:16px;
+            border:1px solid #666;
+            margin-left:15px;
+            float: left;
+        }
+        #check-all1{
+            font-size:12px;
+            color:#333;
+            margin-left:30px;
+            font-weight: 800;
+            float: left;
+        }
+        #shop-name{
+            font-size:12px;
+            color:#666;
+            font-weight: 800;
+            margin-left:5px;
+            float: left;
+        }
+        .connect-cart-us{
+            width:65px;
+            height:15px;
+            border:1px solid #ffc839;
+            margin-left:10px;
+            border-radius: 2px;
+            background: #feda3a url(../images/cartimages/sstalking-ico.gif)no-repeat;
+            background-position: 0 -4px;
+            float: left;
+        }
+    }
+
+    #cart-shop-goods{
+        width:1190px;
+        height:80px;
+        background: #f2fff0;
+        float: left;
+        #left-cart-goods{
+            width:376px;
+            float: left;
+        #cart-shop-select{
+            width:16px;
+            height:16px;
+            border:1px solid #666;         
+            margin:34px 24px 0 15px;            
+            float: left;
+        }
+        img{
+            width:50px;
+            height:50px;
+            border:1px solid #eee;            
+            margin-top:10px;
+            float: left;
+        }
+        .scan-bigPic{
+            font-size:12px;
+            color:#000;
+            margin-top:63px;
+            margin-left:-50px;
+            float: left;
+        }
+        .account-for{
+            font-size:12px;
+            color:#000;
+            padding-top:7px;
+            margin-left:10px;
+            width:250px;
+            white-space: wrap;
+            float: left;
+            }
+           .specification{
+            font-size:12px;
+            color:#000;
+            margin-left:10px;
+           } 
+           #guarantee-1{
+            font-size:12px;
+            color:#000;
+            margin-left:10px; 
+            float: left;         
+           }
+           .guarantee-2{
+               width:50px;
+               height:16px;
+               background: url(../images/cartimages/bq.png)repeat 17px 1px;
+           
+             float: left;  
+           }
+        
+    }
+     
+     #right-cart-goods{
+         float: left;
+         
+           .what-num{
+            font-size:12px;
+            color:#000;
+            margin-top:25px;
+            margin-left:120px; 
+            float: left;  
+           }
+           .del{
+            font-size:12px;
+            color:#ccc;
+             margin-top:10px;
+            margin-left:80px; 
+            float: left;  
+           }
+           .all-cart-total{
+               font-size:12px;
+              color:#666;
+             margin-top:30px;
+            margin-left:-47px; 
+            float: left;
+           }
+           .save-money{
+               width:88px;
+               height:22px;
+               margin-top:50px;
+               margin-left:-64px;
+               background: #24C336;
+              font-size:12px;
+              color:#666; 
+              text-align: center;
+              line-height: 22px; 
+              float: left;             
+           }
+           .btnL{
+               width:15px;
+               height:15px;
+               margin-top:25px;
+               margin-left:65px;
+               margin-right:5px;
+               border: 1px solid #eee;
+               font-size: 12px;
+               color:#666;
+               text-align: center;
+               line-height: 15px;
+               float: left;
+           }
+           .btnR{
+               width:15px;
+               height:15px;
+               margin-top:25px;
+               margin-left:5px;
+               border: 1px solid #eee;
+               font-size: 14px;
+               color:#666;
+               text-align: center;
+               line-height: 15px;
+               float: left;
+           }
+           #cart-num{
+               width:35px;
+               height:22px;
+               margin-top:20px;
+               float: left;
+           }
+           #promotion{
+               width:60px;
+               height:20px;
+               background: #ff5600;
+                font-size: 14px;
+               color:#fff;
+               float: left;
+                margin-top:25px;
+               margin-left:40px;
+               float: left;
+           }
+           #money{
+               font-size: 12px;
+               color:#ff5600;
+               font-weight: 800;
+               margin-top:25px;
+               margin-left:80px;
+               float: left;
+           }
+           #collect{
+               font-size: 12px;
+               color:#666;
+               font-weight: 700;
+               margin-top:18px;
+               margin-left:80px;
+               float:left;
+           }
+           #collect{
+               font-size: 12px;
+               color:#666;
+               font-weight: 700;
+               margin-top:18px;
+               margin-left:80px;
+               float:left;
+           }
+           #del-cart{
+               
+               font-size: 12px;
+               color:#666;
+               font-weight: 700;
+               margin-top:35px;
+               margin-left:-22px;
+               float:left;
+           }
+        }  
+      }    
+    }    
+}
+/*count*/
+#count-cart-jiesuan{
+    width:1190px;
+    height:36px;
+    background:#f3f3f3;
+    border:1px solid #ccc;
+    margin:5px auto;
+    li{
+        margin-top:10px;
+        float: left;
+        #check-all{
+            width:16px;
+            height:16px;
+            border:1px solid #666;
+            margin-left:15px;
+            float: left;
+        }
+        .check-all1{
+            font-size:14px;
+            color:#333;
+            margin-left:5px;
+            float: left;
+        }
+        .del-some{
+            font-size:14px;
+            color:#666;
+            margin-left:15px;
+            float: left;
+        }
+        .shop{
+            font-size:14px;
+            color:#404040;
+            margin-left:15px;
+
+            float: left;
+        }
+        #total{
+            font-size:14px;
+            color:#ff4d13;
+            font-weight: 800;
+            float: left;
+        }
+        .settle-accounts{
+            width:132px;
+            height:36px;
+            margin-left:10px;
+            border:none;
+            border:2px solid #f17401;
+            background:#ff9900;
+            float: left;
+            .settle-accounts1{
+                font-size:16px;
+                color:#fff;
+                font-weight: 800;
+                text-align: center;
+                line-height: 32px;
+                letter-spacing: 10px;
+                
+            }
+        }
+    }
+    li:nth-child(2){
+        margin-left:682px;
+    }
+    li:nth-child(3){
+        margin-top:0;
+    }
+}

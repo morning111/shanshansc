@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>欢迎登录</title>
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+	</head>
+	<body>
+		<div id="header">
+			
+		</div>
+		<div id="all">
+			<div id="denglujiemian">
+				<a href="javascript:;"><img src="../images/loginimages/reg-logo.jpg" class="logo" alt=""  /></a><span></span><h5><a href="javascript:;">欢迎登录</a></h5>
+			</div>
+			
+			<div id="nav">
+				<form action="">
+					<div id="leftTop">
+						<ul>
+							<li>
+								<i>&nbsp;&nbsp;&nbsp;*</i><label>登录名：</label>
+						<input type="text" id="name" placeholder="用户名/邮箱/已验证手机"/><div id="tip1">请输入密码</div>
+							</li>
+							<li>
+								<i>*</i><label>登录密码：</label><input type="password" id="pwd" placeholder="密码	" /><div id="tip2">请输入登录密码</div>
+							</li>
+							<li>
+								<a href="javascript:;" id="wangji">忘记登录密码？</a>
+							</li>
+							<li>
+								<input type="button" id="btn" value="立即登录"/><div id="tip3"></div>
+							</li>
+							<li>
+								<a href="javascript:;" id="mianfeizhuce">免费注册？</a>
+							</li>
+						</ul>
+
+                    <div id="qita">
+						<p id="qita_1">您可以使用以下山山商城合作伙伴的账户登录：</p>
+						<div id="hezuo">
+							<a href="javascript:;"id="first"><img src="../images/loginimages/ssb-weixin.jpg" alt="" /><a href="javascript:;" id="first_1">微信</a></a>
+							<a href="javascript:;"><img src="../images/loginimages/dl_23.jpg" alt="" /></a>
+							<a href="javascript:;"><img src="../images/loginimages/dl_39.jpg" alt="" /></a>
+							<a href="javascript:;"><img src="../images/loginimages/dl_27.jpg" alt="" /></a>
+						</div>
+					 </div>
+					</div>
+					 
+					 <div id="right">
+						<a href="javascript:;" id="tupian"><img src="../images/loginimages/118.jpg"/></a>
+				</div>
+				</form>
+				
+			</div>
+		</div>
+		<div id="footer">
+				
+		</div>
+		<div id="rightButton">
+	
+        </div>
+	</body>
+	<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/ajax.js">
+		
+	</script>
+	<script type="text/javascript">
+		var name=getCookie("username");
+		var pass=getCookie("password");
+		console.log($("#name").val());
+		console.log(pass);		
+		$("#btn").click(function(){
+		var loname=$("#name").val();
+		var lopass=$("#pwd").val();
+		console.log(loname);
+		console.log(lopass);
+		if(loname==name&& lopass==pass){		
+				window.location.href="../html/index.html";
+		  }else{
+		  		$("#tip3").html("账号或密码输入错误，请重新输入");
+		  }
+		})
+		
+		$("#name").focus (function(){
+			$("#tip1").css({
+			display:"block",
+			background:"#E2ADAB"
+		}),
+			$("#name").css({
+			borderColor:"#DD1F1F"
+		});	
+	})
+		
+$("#name").blur(function(){
+if($("#name").val()==name){
+/*console.log($(this).val())*/
+//正确
+$("#tip1").html("输入正确");
+$("#tip1").css({
+	display:"none"
+})
+}else{	
+	
+   $("#tip1").html("输入账号错误或不存在,请重新输入");
+}
+$("#pwd").focus(function(){
+		$("#tip2").css({
+			display:"block",
+			background:"#E2ADAB"
+		}),
+		$("#pwd").css({
+			borderColor:"#DD1F1F"
+		});
+})
+
+$("#pwd").blur(function(){
+	if($("#pwd").val()==pass){
+	//正确
+	/*console.log($(this).val())*/
+	$("#tip2").html("输入正确");
+    $("#tip2").css({
+		display:"none"
+})
+	}else{
+		//错误
+		
+		$("#tip2").html("密码输入格式错误，请重新输入");
+	}
+})
+
+})
+		
+	</script>
+	<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+<!--<script type="text/javascript" src="../js/login-1.js"></script>-->
+<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+</html>

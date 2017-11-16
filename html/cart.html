@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车页</title>
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/cart.css"/>
+	</head>
+	<body>
+		<div id="header">
+			
+		</div>
+		<div id="grid">
+			<div id="gridLogo">
+				<a href="javascript:;">
+					<img src="../images/listimages/logo.jpg"/ class="logo">
+				</a>
+				<span></span>
+				<a href="javascript:;" class="zimeiti">自媒体视频直播购物</a>
+			</div>
+			
+			<div id="sousuo">
+				<input type="text" class="sousuo_1" placeholder="年货潮礼 寻山大礼包"/><button>搜索</button>
+				<ul>
+					<li>热门搜索：</li>
+					<li><a href="javascript:;">青钱柳原叶</a></li>
+					<li><a href="javascript:;">土家鸡</a></li>
+					<li><a href="javascript:;"> 畲葛山黄粿</a></li>
+				</ul>
+			</div>
+			<div class="rightMyShanshan">
+				<div id="myShanshan">
+					<a href="javascript:;">我的山山</a>
+				</div>
+				<div id="myCart">
+					<a href="javascript:;">购物车</a><div>0</div>
+				</div>
+			</div>			
+		</div>
+		<!--nav-->
+		<div id="nav-cart">
+			<ul>
+				<li><a href="javascript:;">首页</a></li>
+				<li><a href="javascript:;">山山美食馆</a></li>
+				<li><a href="javascript:;">畲乡静宁馆</a></li>
+				<li><a href="javascript:;">基地视频</a></li>
+				<li><a href="javascript:;">实况直播</a></li>
+				<li><a href="javascript:;">景宁直播中心</a></li>
+			</ul>
+		</div>
+		
+		
+		<!--message-a-->
+		<div id="message">
+			<ul>
+				<li><a href="javascript:;" class="maimaimai-cart1">1.查看购物车</a></li>
+				<li><a href="javascript:;" class="maimaimai-cart">2.确认订单</a></li>
+				<li><a href="javascript:;" class="maimaimai-cart">3.付款到山山商城</a></li>
+				<li><a href="javascript:;" class="maimaimai-cart">4.确认收货</a></li>
+				<li><a href="javascript:;" class="maimaimai-cart5">5.评价</a></li>
+			</ul>
+		</div>
+		<!--caozuo-->
+		<div id="caozuo-cart">
+			<ul>
+				<li>
+					<input type="checkbox" name="check-all" id="check-all" value="" />
+					<span class="check-all1">全选</span>
+					<a href="javascript:;" class="del-some">批量删除</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="shop">店铺宝贝</a>					
+				</li>
+				<li>
+					<a href="javascript:;" class="jifen-cart">商城积分</a>					
+				</li>
+				<li>
+					<a href="javascript:;" class="price-cart">单价（元）</a>					
+				</li>
+				<li>
+					<a href="javascript:;" class="num-cart">数量</a>					
+				</li>
+				<li>
+					<a href="javascript:;" class="discounts-cart">优惠</a>					
+				</li>
+				<li>
+					<a href="javascript:;" class="sum-cart">小计（元）</a>					
+				</li>
+			</ul>
+		</div>
+		
+		<!--cart-->
+		<div id="cart-amount">
+			<div id="cart-amount-1">
+				<div id="shop-cart-1">
+					<input type="checkbox" name="check-all" id="check-all" value="" />
+					<span id="check-all1">店铺：</span>
+					<span id="shop-name">塬景水果旗舰店</span>
+					<div class="connect-cart-us"></div>
+				</div>
+				<div id="cart-shop-goods">
+					
+				<div id="left-cart-goods">
+					<input type="checkbox" name="cart-shop-select" id="cart-shop-select" value="" />
+					<img src="../images/cartimages/small_201507151611066434(2).jpg"/><p class="scan-bigPic">查看大图</p>
+					<li><span class="account-for">陕西特产 正宗洛川苹果 新鲜红富士24个80mm 脆甜多汁 产地直供</span></li>
+					<li><span class="specification">规格：默认</span></li>
+					
+				<span id="guarantee-1">保障：</span>
+				<div class="guarantee-2"></div>
+			</div>
+			<div id="right-cart-goods">
+				<span class="what-num">188</span>
+				<del class="del">￥118.00</del>
+				<span><a href="javascript:;" class="all-cart-total">￥88.00</a></span>
+				<div class="save-money">省￥30.00元</div>
+				<button class="btnL">-</button>
+				<input type="text" name="cart-num" id="cart-num" value="1" />
+				<button class="btnR">+</button>
+				<div id="promotion">卖家促销</div>
+				<span id="money">￥188.00</span>
+				<span id="collect">收藏</span>
+				<span id="del-cart">删除</span>
+				</div>
+			</div>	
+		</div>				
+	</div>
+	
+	<!--结算-->
+	<div id="count-cart-jiesuan">
+		<ul>
+				<li>
+					<input type="checkbox" name="check-all" id="check-all" value="" />
+					<span class="check-all1">全选</span>
+					<a href="javascript:;" class="del-some">批量删除</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="shop">商品总价（不含运费）：</a><span id="total"><a href="javascript:;">￥437.00</a></span>					
+				</li>
+				<li><button class="settle-accounts"><a href="javascript:;" class="settle-accounts1">结算</a></button></li>
+		
+	</div>
+		
+		<div id="footer"></div>
+		<div id="rightButton"></div>
+	</body>
+	<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/cart.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+</html>
