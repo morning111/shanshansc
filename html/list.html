@@ -5,6 +5,7 @@
 		<title>列表页</title>
 		<link rel="stylesheet" type="text/css" href="../css/list.css"/>
 		<link rel="stylesheet" href="../css/common.css" />
+		<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div id="header">
@@ -66,8 +67,20 @@
 		</div>
 		<!--nav-last-->
 		<div id="chazhaobaobei">
-			<textarea name="" rows="" cols="" class="address" placeholder="发货地"></textarea>
-			<textarea name="" rows="" cols="" class="shunxu" placeholder="默认排序"></textarea>
+			<input class="address" placeholder="发货地">
+			<ul class="address-select">
+				<li id="prov"></li>
+				<li id="city"></li>
+				<li id="county"></li>
+			</ul>
+			<input class="shunxu" placeholder="默认排序">
+				<ul class="shunxu-val">
+					<li><em></em><span class="low">价格从低到高</span></li>
+					<li><em></em><span class="high">价格从高到低</span></li>
+					<li><em></em><span class="volume-order">总销量从高到低</span></li>
+					<li><em></em><span class="release-time">按发布时间排序</span></li>
+					<li><em></em><span class="defaul-val">恢复默认排序</span></li>
+				</ul>
 			<input type="text" name="" id="xiaoliang" value="" placeholder="销量"/>
 			<input type="text" name="" id="price-1" value="" placeholder="价格"/>
 			<input type="text" name="" id="from" value="" />
@@ -88,12 +101,32 @@
 		<div id="footer">
 				
 		</div>
-		<div id="rightButton"></div>
+		<!--rightbutton-->
+		<div id="rightButton">
+			<ul class="xuanfu">
+		<li class="kefu"><img src="../images/indeximages/kf2.png" style="display:none" class="kf2"/></li>
+		<li class="rightCart">
+			<img src="../images/indeximages/gw2.png" style="display:none" class="gw2"/>
+			<div class="num">3</div>
+		</li>
+		<li class="erweima">
+			<img src="../images/indeximages/wx2.png" style="display:none" class="wx2"/>
+			<div id="ma">
+				<img src="../images/indeximages/ewm.png" id="ma-1"/>
+				<p class="weixin">山山商城微信</p>
+			</div>
+		</li>
+		<li class="shoucang"><img src="../images/indeximages/sc2.png" style="display:none" class="sc2"/></li>
+		<li class="backTop" id="a2">
+			<img src="../images/indeximages/gtop2.png" style="display:none" class="backtop2"/>
+			<div class="backTop_1">
+				<a href="javascript:;" onfocus="this.blur();"></a>
+			</div>
+		</li>
+	</ul>
+        </div>
 	</body>
-	<script type="text/javascript" src="../js/ajax.js">
-		
-	</script>
+	<script type="text/javascript" src="../js/ajax.js"></script>
 	<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/list.js" type="text/javascript" charset="utf-8"></script>
-	
 </html>

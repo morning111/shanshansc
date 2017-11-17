@@ -1,15 +1,25 @@
-$(function(){
+//rightButton
 	$(".backTop").click(function(){
 		$(".backTop").css({"background":"none"})
 		$(".backtop2").css({"display":"block"})
 		$("body,html").css({"display":"block"})
 		             .animate({
 						scrollTop:0
-					},1000)		
+					},1000,function(){
+						$(".backTop").hide()
+					})
 	})
 	$(".backTop").mouseleave(function(){
 	$(".backtop2").css({"display":"none"})
     })
+	$(window).scroll(function(){
+        var htmlTop = $(document).scrollTop();
+        if( htmlTop > 0){
+            $(".backTop").fadeIn();    
+        }else{
+            $(".backTop").fadeOut();
+        }
+    });
 
 $(".kefu").mouseenter(function(){
 	$(".kefu").css({"background":"none"})
@@ -45,4 +55,4 @@ $(".shoucang").mouseleave(function(){
 	$(".shoucang").css({"background":"url(images/indeximages/sc.png)"})
 	$(".sc2").css({"display":"none"})
 })
-})
+

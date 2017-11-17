@@ -544,6 +544,21 @@ input {
 }
 
 /*xiangqing*/
+/* ie 6/7 */
+.clearfix {
+  *zoom: 1;
+  *height: 1px;
+}
+
+/* IE8+ */
+.clearfix:after {
+  content: "";
+  height: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+}
+
 #main-cuxiao {
   width: 1190px;
   min-height: 323px;
@@ -563,19 +578,6 @@ input {
   border: 1px solid #eee;
   border-bottom: none;
   float: left;
-  /* ie 6/7 */
-  /* IE8+ */
-}
-#main-cuxiao .time .yhtm .clearfix {
-  *zoom: 1;
-  *height: 1px;
-}
-#main-cuxiao .time .yhtm .clearfix:after {
-  content: "";
-  height: 0;
-  clear: both;
-  display: block;
-  visibility: hidden;
 }
 #main-cuxiao .time .yhtm .first-child, #main-cuxiao .time .yhtm .second-child {
   width: 96px;
@@ -610,7 +612,7 @@ input {
 }
 #main-cuxiao .time .time-one {
   float: left;
-  padding-left: 400px;
+  padding-left: 403px;
   border: 1px solid #D1D1D1;
 }
 #main-cuxiao .time .time-one span {
@@ -621,7 +623,7 @@ input {
   float: left;
   margin-right: 5px;
 }
-#main-cuxiao .time .time-one .shi, #main-cuxiao .time .time-one .fen, #main-cuxiao .time .time-one .miao {
+#main-cuxiao .time .time-one .tian, #main-cuxiao .time .time-one .shi, #main-cuxiao .time .time-one .fen, #main-cuxiao .time .time-one .miao {
   font-size: 16px;
   display: block;
   width: 30px;

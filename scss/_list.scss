@@ -179,6 +179,7 @@
     height:35px;
     background: #ebf8eb;
     margin:10px auto;
+    position:relative;
     .address{
         width:82px;
         height:24px;
@@ -188,6 +189,17 @@
         resize: none;
         float: left;
     }
+    .address-select{
+        width:310px;
+        min-height:200px;
+        _height:200px;
+        border:1px solid #ccc;
+        position:absolute;
+        top:32px;
+        left:5px;
+        background:#fff;
+        display:none;
+    }
     .shunxu{
         width:124px;
         height:24px;
@@ -195,6 +207,43 @@
          margin-top:5px;
         margin-left:-115px;       
         float: left;
+    }
+    .shunxu-val{
+        width:124px;
+        height:130px;
+        background:#fff;
+        border:1px solid #ccc;
+        position:absolute;
+        top:32px;
+        left:114px;
+        display:none;
+        li{
+            height:25px;
+            border-bottom:1px dashed #ccc;
+            em{
+                width:20px;
+                height:10px;
+                background:url("../images/listimages/20130325_columns.png")no-repeat;
+                background-position:-72px -61px ;
+                margin-top:7px;
+                margin-left:4px;
+                float:left;
+            }
+            span{
+                display: block;
+                width:96px;
+                height:25px;
+                 font-size:12px;
+                 color:#666;
+                 margin-left:4px;
+                 line-height:25px;
+                 float:left;
+            }
+           
+        }
+        li:last-child{
+            border-bottom: none;
+        }
     }
     #xiaoliang{
         width:45px;
@@ -346,16 +395,19 @@
         border:1px solid #587154;
         margin-left:296px;
         margin-top:32px;
+        float: left;
     }
     .hunt-2{
         width:88px;
-        height:32px; 
+        height:31px; 
         border:none;
         border:1px solid #587154;
         background: #134a0e;
         font-size:16px;
         color:#fff;
         text-align: center;
-        line-height: 32px;
+        margin-top:32px;
+        line-height: 31px;
+        float: left;
     }
 }

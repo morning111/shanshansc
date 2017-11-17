@@ -521,6 +521,19 @@ input{outline:none;}
 
 }
 /*xiangqing*/
+/* ie 6/7 */
+.clearfix{
+    *zoom : 1;
+    *height: 1px;
+}
+/* IE8+ */
+.clearfix:after{
+    content: "";
+    height: 0;
+    clear: both;
+    display: block;
+    overflow: hidden;
+}
 #main-cuxiao{
     width:1190px;
     min-height:323px;
@@ -537,20 +550,7 @@ input{outline:none;}
         height:39px;
         border:1px solid #eee;
         border-bottom:none; 
-        float:left;
-        /* ie 6/7 */
-        .clearfix{
-            *zoom : 1;
-            *height: 1px;
-        }
-        /* IE8+ */
-        .clearfix:after{
-            content: "";
-            height: 0;
-            clear: both;
-            display: block;
-            visibility: hidden;
-        }
+        float:left;       
         .first-child,.second-child{
            width:96px;
            height:38px;
@@ -585,7 +585,7 @@ input{outline:none;}
     }
     .time-one{          
             float: left; 
-            padding-left:400px;
+            padding-left:403px;
             border:1px solid #D1D1D1;           
             span{
                 font-size: 14px;
@@ -595,7 +595,7 @@ input{outline:none;}
                 float: left;
                 margin-right:5px;
             }
-            .shi,.fen,.miao{
+            .tian,.shi,.fen,.miao{
                 font-size: 16px;
                 display: block;
                 width:30px;

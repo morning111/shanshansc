@@ -235,9 +235,95 @@ $("#header").load("html/indexheader.html");
 		}
 	})
     
+/*  倒计时开始    */
+/*function show_time(stid)
+{
+	var timer = $(".main"+stid);
+    timerID = stid;
+    if(!timer){
+      return ;
+	}
+	if(stid != 1){
+		var end_time = $(".main"+stid).attr('end_time');
+		var now = new Date();   
+		var date = now.getTime();
+		var time = Math.floor(date / (1000));      
+		time_distance= parseInt(end_time) - parseInt(time);//结束的时间
+	 }else{
+		 time_distance=$('.main'+stid).attr('levetime');//结束的时间
+	 } 
+    var time_now,time_distance,str_time;
+    var int_day,int_hour,int_minute,int_second;
+    if(time_distance>0)
+    {
+      if(stid ==1){
+    	  time_distance--;
+      }     
+      $('.main'+stid).attr('levetime',time_distance);
+      int_day=Math.floor(time_distance/86400)
+      time_distance-=int_day*86400;
+      int_hour=Math.floor(time_distance/3600)
+      time_distance-=int_hour*3600;
+      int_minute=Math.floor(time_distance/60)
+      time_distance-=int_minute*60;
+      int_second=Math.floor(time_distance/1)
+      if(int_hour<10)
+       int_hour="0"+int_hour;
+      if(int_minute<10)
+       int_minute="0"+int_minute;
+      if(int_second<10)
+       int_second="0"+int_second;
 
+      //str_time=int_day+"天"+int_hour+"小时"+int_minute+"分"+int_second+"秒";
+      $(".time_"+stid).children('.day').html(int_day);
+      $(".time_"+stid).children('.hour').html(int_hour);
+      $(".time_"+stid).children('.min').html(int_minute);
+      $(".time_"+stid).children('.sec').html(int_second);
+      setTimeout("show_time('"+stid+"')",1000);
+   }else{
+       $(".time_"+stid).children('.day').html('00');
+       $(".time_"+stid).children('.hour').html('00');
+       $(".time_"+stid).children('.min').html('00');
+       $(".time_"+stid).children('.sec').html('00');
+      clearTimeout(timerID)
+   }
+       
+}*/
+/*var end = new Date("2017-11-30 00:00:00");
+	var start = new Date();
+	var t = diff(start,end);//秒
+	var oP = document.getElementsByClassName("time-one")[0];
+	var yu = document.getElementsByClassName("yu");
+	var shi = document.getElementsByClassName("shi");
+	var fen = document.getElementsByClassName("fen");
+	var hour = document.getElementsByClassName("hour");
+	var miao = document.getElementsByClassName("miao");
+	var minite = document.getElementsByClassName("minite");
+	var timeover = document.getElementsByClassName("timeover");
+	var day = document.getElementsByClassName("day");
+	function showTime(){
+		//剩余的小时数
+		var fen = parseInt( t / 3600 ) ;
+		//剩余的分钟数
+		var m = parseInt( (t - h*3600) / 60 ) ;
+		//剩余的秒数
+		var s = parseInt( t - h*3600 - m * 60 );
+		oP.innerHTML = "剩余" + fen + "小时" + m + "分钟" + s + "秒";	
+		return "剩余" + h + "小时" + m + "分钟" + s + "秒";
+	}
+	//页面加载时显示时间 防止时间显示延时问题
+	oP.innerHTML = showTime();	
+	var timer = setInterval(function (){
+		t--;
+		if( t <= 0 ){
+			
+			clearInterval(timer);
+		}else{
+			showTime();
+		}
+	} , 1000)
     
-    
+    */
  
  
  //详情部分的json导入 一楼
@@ -416,11 +502,21 @@ function d(){
 		$("body,html").css({"display":"block"})
 		             .animate({
 						scrollTop:0
-					},1000)		
+					},1000,function(){
+						$(".backTop").hide()
+					})
 	})
 	$(".backTop").mouseleave(function(){
 	$(".backtop2").css({"display":"none"})
     })
+	$(window).scroll(function(){
+        var htmlTop = $(document).scrollTop();
+        if( htmlTop > 0){
+            $(".backTop").fadeIn();    
+        }else{
+            $(".backTop").fadeOut();
+        }
+    });
 
 $(".kefu").mouseenter(function(){
 	$(".kefu").css({"background":"none"})
