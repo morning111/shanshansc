@@ -22,7 +22,7 @@ input{outline:none;}
 				font-size:14px;
 				color:#666;
 				line-height: 30px;
-				font-weight: 700px;
+				font-weight: 700;
 				float:left;
 			}
 			#header .xingbiao img{
@@ -45,13 +45,13 @@ input{outline:none;}
 				font-size:14px;
 				color:#666;
 				line-height: 30px;
-				font-weight: 700px;
+				font-weight: 700;
 			}
 			#header ul li a{
 				font-size:14px;
 				color:#666;
 				line-height: 30px;
-				font-weight: 700px;
+				font-weight: 700;
 				margin-left: 10px;
 				margin-right:7px;
 			}

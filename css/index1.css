@@ -382,7 +382,7 @@ input {
 }
 #banner #bannerlunbo {
   overflow: hidden;
-  width: 1190px;
+  width: 800px;
   height: 450px;
   margin: 0 auto;
   position: absolute;
@@ -525,6 +525,7 @@ input {
   position: absolute;
   top: 390px;
   left: 1065px;
+  z-index: 10000 !important;
 }
 #banner #slide #little-dot li {
   width: 25px;
@@ -555,7 +556,7 @@ input {
   content: "";
   height: 0;
   clear: both;
-  display: block;
+  display: none;
   overflow: hidden;
 }
 
@@ -612,7 +613,7 @@ input {
 }
 #main-cuxiao .time .time-one {
   float: left;
-  padding-left: 403px;
+  padding-left: 390px;
   border: 1px solid #D1D1D1;
 }
 #main-cuxiao .time .time-one span {
@@ -636,9 +637,11 @@ input {
   border: 1px solid #eee;
   border-top: none;
   display: block;
+  overflow: hidden;
 }
 #main-cuxiao .tab-goodsSail .main {
   width: 206px;
+  height: 284px;
   text-align: center;
   float: left;
   margin-right: 10px;
@@ -848,6 +851,9 @@ input {
   color: #ff6101;
   padding-top: 8px;
   margin-left: 14px;
+}
+#louceng #first-floor #liebiao .tab-goodsSail-two:hover {
+  box-shadow: 0px 5px 4px #B9D2B4;
 }
 #louceng #first-floor #fist-floor-right {
   width: 235px;

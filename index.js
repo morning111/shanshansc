@@ -47,17 +47,36 @@ $("#header").load("html/indexheader.html");
 		          .fadeIn(1000)
 		          .siblings()
 		          .fadeOut(1000);
+		$("#little-dot li").mouseenter(function(){
+			$(this).addClass("current")
+		        .siblings()
+		        .removeClass("current");
+			
+		    $("#lunbotu-pic li").eq($(this).index())
+                .fadeIn(1000)
+		        .siblings()
+		        .fadeOut(1000);		                        
+		    clearInterval(timer);
+		})		
+		$("#little-dot li").mouseleave(function(){
+			clearInterval(timer);		 
+		    index=$(this).index();
+			/*$("#lunbotu-pic li").eq($(this).index()).css({"zIndex":-1,"opacity":0,"display":"none"})
+			                    .siblings().css({"zIndex":1,"opacity":1,"display":"list-item"});*/
+		    timer = setInterval(autoPlay,2000);
+		         		          
+		})
 	}
-	$("ol li").click(function(){
-		$("#little-dot li").eq(index)
-		          .addClass("current")
-		          .siblings()
-		          .removeClass("current");
-		$("#lunbotu-pic li").eq(index)
-		          .fadeIn(1000)
-		          .siblings()
-		          .fadeOut(1000);
-	})
+	
+//	function auto(){
+//		var timer = setInterval(function(){
+//			index ++;
+//			if(index>4){
+//				index = 0;
+//			}
+//		},2000)
+//	}
+	
 	
 	//二级导航栏
 	$(".list-ul-one").mouseenter(function(){
@@ -367,7 +386,7 @@ function a(){
 		})                 
  })
 }
- 
+
 //二楼
 ajaxGet("json/index2.json",function(res){
 	 json = eval(res);

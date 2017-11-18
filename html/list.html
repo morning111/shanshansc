@@ -8,9 +8,7 @@
 		<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		<div id="header">
-				
-		</div>
+		<div id="header"></div>
 		<!--logo-->
 		<div id="logoSign">
 			<h1><img src="../images/listimages/logo.jpg" class="logo"/></h1>
@@ -22,12 +20,25 @@
 			<ul class="list-ul-1">
 				<li><a href="javascript:;" class="all">全部</a><i>></i></li>
 				<li><a href="javascript:;" class="all">生鲜食品</a><i>></i></li>
-				<li><a href="javascript:;" class="all">水果</a><i>></i></li>
+				<li class="change-1"><a href="javascript:;" class="all">水果</a><input type="button" name="" id="" value="" class="zhuan"/><i>></i>
+					<div class="tab-down">
+					<ul class="pull-down">
+						<li>水果</li>
+						<li>蔬菜</li>
+						<li>蛋品</li>
+						<li>冷藏品</li>
+						<li>水产</li>
+						<li>肉类</li>
+					</ul>
+				</div>
+				</li>
+				
 				<li><input type="text"  class="ul-sou"/>
 				<button class="ul-suo">
 					<img src="../images/listimages/111_03.jpg"/>
 				</button></li>
 			</ul>
+			
 		</div>
 		<!--nav-all-->
 		<div id="nav-all">
@@ -69,23 +80,27 @@
 		<div id="chazhaobaobei">
 			<input class="address" placeholder="发货地">
 			<ul class="address-select">
-				<li id="prov"></li>
-				<li id="city"></li>
-				<li id="county"></li>
+				<div id="prov"></div>
+				<div id="city"></div>
+				<div id="county"></div>
 			</ul>
-			<input class="shunxu" placeholder="默认排序">
-				<ul class="shunxu-val">
-					<li><em></em><span class="low">价格从低到高</span></li>
-					<li><em></em><span class="high">价格从高到低</span></li>
-					<li><em></em><span class="volume-order">总销量从高到低</span></li>
-					<li><em></em><span class="release-time">按发布时间排序</span></li>
-					<li><em></em><span class="defaul-val">恢复默认排序</span></li>
-				</ul>
+			<div class="shunxu-all">
+				<!--<input class="shunxu" placeholder="默认排序">-->
+				<select class="shunxu" placeholder="默认排序">
+					<option><em></em><span>默认排序</span></option>
+					<!--<li><em></em><span class="low"></span></li>
+					<li><em></em><span class="high"></span></li>
+					<li><em></em><span class="volume-order"></span></li>
+					<li><em></em><span class="release-time"></span></li>
+					<li><em></em><span class="defaul-val"></span></li>-->
+				
+			    </select>
+			</div>
 			<input type="text" name="" id="xiaoliang" value="" placeholder="销量"/>
 			<input type="text" name="" id="price-1" value="" placeholder="价格"/>
-			<input type="text" name="" id="from" value="" />
-			<span class="sub"></span>
-			<input type="text" name="" id="from" value="" />
+			<input type="text" name="" id="from" value="￥" />
+			<div class="sub">-</div>
+			<input type="text" name="" id="from" value="￥" />
 			<input type="checkbox" name="" id="anniu" value="" />
 			<input type="text" name="" id="baoyou" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;包邮"/>
 		</div>
