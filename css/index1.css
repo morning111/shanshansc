@@ -1423,6 +1423,9 @@ input {
   top: -342px;
   right: 0;
 }
+#louceng #fifth-floor .mssh .mssh li:hover {
+  box-shadow: 0px 0px 5px 4px #B9D2B4;
+}
 
 #footer {
   width: 990px;

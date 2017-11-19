@@ -185,4 +185,148 @@
   margin-right: 53px;
 }
 
+#rightButton {
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  height: 268px;
+  z-index: 9999;
+  display: block;
+  cursor: pointer;
+}
+
+#rightButton .xuanfu {
+  width: 66px;
+  height: 268px;
+  position: relative;
+}
+
+#rightButton .xuanfu .backTop {
+  z-index: 99999;
+  margin-top: -335px;
+}
+
+#rightButton .xuanfu .backTop .backtop2 {
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+#rightButton .xuanfu .backTop .backTop_1 {
+  background: url("../images/loginimages/gtop.png") no-repeat;
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+#rightButton .xuanfu .backTop:hover .backtop2 {
+  display: block;
+}
+
+#rightButton .kefu {
+  background: url("../images/loginimages/kf.png") no-repeat;
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+#rightButton .kefu .kf2 {
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+#rightButton .kefu:hover .kf2 {
+  display: block;
+}
+
+#rightButton .rightCart {
+  background: url("../images/loginimages/gw.png") no-repeat;
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+#rightButton .rightCart .gw2 {
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+#rightButton .rightCart .num {
+  width: 20px;
+  height: 20px;
+  background: #d00;
+  position: absolute;
+  left: 0;
+  top: 65px;
+  font-size: 16px;
+  text-align: center;
+  margin-left: -10px;
+  margin-top: 10px;
+  color: #fff;
+  line-height: 20px;
+}
+
+#rightButton .rightCart:hover .gw2 {
+  display: block;
+}
+
+#rightButton .erweima {
+  background: url("../images/loginimages/wx.png") no-repeat;
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+#rightButton .erweima .wx2 {
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+#rightButton .erweima #ma {
+  width: 150px;
+  height: 195px;
+  position: relative;
+  top: -170px;
+  left: -170px;
+  background: #fff;
+  border: 1px solid #666;
+  display: none;
+}
+
+#rightButton .erweima #ma #ma-1 {
+  width: 150px;
+  height: 150px;
+}
+
+#rightButton .erweima #ma .weixin {
+  width: 120px;
+  margin-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  border-bottom: 1px solid #666;
+}
+
+#rightButton .shoucang {
+  background: url("../images/loginimages/sc.png") no-repeat;
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+#rightButton .shoucang .sc2 {
+  width: 66px;
+  height: 66px;
+  margin-top: 1px;
+}
+
+#rightButton .shoucang:hover .sc2 {
+  display: block;
+}
+
 /*# sourceMappingURL=register.css.map */

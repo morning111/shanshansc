@@ -1,9 +1,71 @@
 $("#footer").load("footer.html");
 $("#header").load("header.html");
-$("#rightButton").load("rightButton.html");
 
 
+//我的山山
+/*$("#logo").click(function(){
+	window.location.href = "../index.html";
+})*/
+$("#myShanshan").click(function(){
+	location.href = "../html/login.html";
+})
+$("#myCart").click(function(){
+	location.href="../html/cart.html";
+})
+$("#myCart").mouseenter(function(){
+	$(".lately").css({display:"block"})
+})
+$("#myCart").mouseleave(function(){
+	$(".lately").css({display:"none"})
+})
 
+//全部分类
+var classifyArr = ["按销量","按分类","按价格","按收藏"];
+for(var i=0;i<classifyArr.length;i++){
+	$(".classifyall").append("<div>"+classifyArr[i]+"</div>")
+}
+var goodssortArr = ["陕西洛川苹果","河北赵县雪花梨","河北赵县皇冠梨","森通有机黑木耳，榛子","海南热带水果","云南水果","优质进口水果"];
+for(var i=0;i<goodssortArr.length;i++){
+	$(".sorts").append("<li>"+goodssortArr[i]+"</li>")
+}
+$(".daohang_all2").mouseenter(function(){
+	$(".classify").css("display","block")
+})
+$(".classify").mouseleave(function(){
+	$(this).css("display","none")
+})
+
+//nav导航栏的滚动条
+/*$("#scroll").css({"marginTop":"0"});
+$("#gonggao").css({"overflow":"hidden"});
+$("#scroll").css({"marginTop":"-1px"});
+var num=0;
+function AutoScroll(){
+	num++;
+	$("#scroll").animate({
+		marginTop:"-=20px"
+	},1000,function(){
+		if(num==2){
+			num=0;
+		$(this).css("marginTop","20px")/*.animate({marginTop:"-1px"},500)*//*.find("p:first").appendTo(this);
+		    }   
+	});
+}
+$(document).ready(function(){
+	setInterval("AutoScroll()",1600);
+});*/
+$("#gonggao").css({"overflow":"hidden"});
+function AutoScroll(){
+	$("#scroll").animate({
+	    marginTop:"-20px"
+	   },1000,function(){
+	    $(this).animate({marginTop:"0px"},500).find("p:first").appendTo(this);
+	   });
+	}    
+	$(document).ready(function(){
+	setInterval('AutoScroll()',2000);	
+	}); 
+//放大镜
 window.onload = function(){
 			function $(id){
 				return document.getElementById(id);
@@ -84,9 +146,66 @@ window.onload = function(){
 			}
 		
 		};
-		
 
-ajaxGet("../json/particular.json",function(res){
+//微信二维码显示
+$(".zhifu").mouseenter(function(){
+	$(".yincang").css("display","block")
+})
+$(".zhifu").mouseleave(function(){
+	$(".yincang").css("display","none")
+})
+//查看所有产品
+$(".goodsForm li").mouseenter(function(){
+	$(this).siblings()
+	       .css("backgroundColor","#EBF8EB")
+})
+$(".goodsForm li").mouseleave(function(){
+	$(this).siblings()
+	       .css("backgroundColor","#fff")
+})
+//商品排行榜导入
+	/*$.ajax({
+		type:"get",
+  		url:"http://127.0.0.1/shanshanshangcheng/json/particular.json",
+  		async:true,
+  		success:function(json){
+  			var title="";
+  			var val="";
+  			for(var attr in json){
+  				title +=`<div id="hotGoods-1" class="active">${ json[attr].name }</div>`;
+				for(var i = 0; i<json.length;i++){
+		            val +=`<li>
+							    <img src="${json[i].img}"/>
+								<a href="javascript:;" title="陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮 ">${json[i].title}</a>
+								<span class="jiage">${json[i].jiage}</span>
+								<div class="soldOut">${json[i].soldOut}</div>
+							</li>`
+					}
+				}
+  			    $("#hotGoodsSail").html(title);
+				$(".hotgoodsList").html(val);
+				
+				//实现选项卡分类效果
+			$("#hotGoodsSail .active").mouseenter(function(){
+				var index = $(this).index() +1;
+				var cname = "classify00" + index;
+				var str = "";
+				for(var i=0;i<json[cname].list.length;i++){
+					var product = json[cname].list[i];
+					str +=`<li>
+					<img src="${json[i].img}"/>
+									<a href="cart.html?pid=${product.id}&cname=${attr}" title="陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮 ">${json[i].title}</a>
+									<span class="jiage">${json[i].jiage}</span>
+									<div class="soldOut">${json[i].soldOut}</div>
+									<span style="display:none" data-id=${product.id} data-img=${product.img} data-zhushi=${product.zhushi} data-cuxiaojiage=${product.cuxiaojiage} data-danjia=${product.danjia}></span>
+								</li>`
+				    }
+				    $(".hotgoodsList").html(str);
+			   }) 			
+  		    }
+	    })*/
+	
+	ajaxGet("../json/particular.json",function(res){
 	var json = JSON.parse(res);
 	var val="";
 	for(var i = 0; i<json.length;i++){
@@ -101,6 +220,66 @@ ajaxGet("../json/particular.json",function(res){
 })
 
 
-$("#logo").click(function(){
-	window.location.href = "../html/index.html";
+/*$("#logo").click(function(){
+	window.location.href = "../index.html";
+})*/
+
+
+
+//rightButton
+	$(".backTop").click(function(){
+		$(".backTop").css({"background":"none"})
+		$(".backtop2").css({"display":"block"})
+		$("body,html").css({"display":"block"})
+		             .animate({
+						scrollTop:0
+					},1000,function(){
+						$(".backTop").hide()
+					})
+	})
+	$(".backTop").mouseleave(function(){
+		$(".backtop2").css({"display":"none"})
+    })
+	$(window).scroll(function(){
+        var htmlTop = $(document).scrollTop();
+        if( htmlTop > 0){
+            $(".backTop").fadeIn();    
+        }else{
+            $(".backTop").fadeOut();
+        }
+    });
+
+$(".kefu").mouseenter(function(){
+	$(".kefu").css({"background":"none"})
+	$(".kf2").css({"display":"block"})
+})
+$(".kefu").mouseleave(function(){
+	$(".kefu").css({"background":"url(../images/indeximages/kf.png)"})
+	$(".kf2").css({"display":"none"})
+})
+$(".rightCart").mouseenter(function(){
+	$(".rightCart").css({"background":"none"})
+	$(".gw2").css({"display":"block"})
+})
+$(".rightCart").mouseleave(function(){
+	$(".rightCart").css({"background":"url(../images/indeximages/gw.png)"})
+	$(".gw2").css({"display":"none"})
+})
+$(".erweima").mouseenter(function(){
+	$(".erweima").css({"background":"none"})
+	$(".wx2").css({"display":"block"})
+	$("#ma").css({"display":"block"})
+})
+$(".erweima").mouseleave(function(){
+	$(".erweima").css({"background":"url(../images/indeximages/wx.png)"})
+	$(".wx2").css({"display":"none"})
+	$("#ma").css({"display":"none"})
+})
+$(".shoucang").mouseenter(function(){
+	$(".shoucang").css({"background":"none"})
+	$(".sc2").css({"display":"block"})
+})
+$(".shoucang").mouseleave(function(){
+	$(".shoucang").css({"background":"url(../images/indeximages/sc.png)"})
+	$(".sc2").css({"display":"none"})
 })

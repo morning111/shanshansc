@@ -240,7 +240,8 @@
   display: none;
 }
 #chazhaobaobei .address-select div {
-  border-bottom: 1px dashed #eee;
+  float: left;
+  padding: 10px;
 }
 #chazhaobaobei .address:hover .address-select {
   display: block;
@@ -325,11 +326,12 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 #particular-list #particular-listAll {
   height: 386px;
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -393,13 +395,19 @@
   font-size: 12px;
   color: #56839f;
 }
-#particular-list #particular-listAll #shiyi .cate {
+#particular-list #particular-listAll #shiyi .flagship {
+  width: 215px;
+  height: 16px;
+  line-height: 16px;
+  float: left;
+}
+#particular-list #particular-listAll #shiyi .flagship .cate {
   margin-top: 5px;
   font-size: 14px;
   color: #797966;
   float: left;
 }
-#particular-list #particular-listAll #shiyi .bac-msg {
+#particular-list #particular-listAll #shiyi .flagship .bac-msg {
   display: block;
   width: 65px;
   height: 16px;

@@ -238,7 +238,9 @@
         background:#fff;
         display:none;
         div{
-            border-bottom:1px dashed #eee;
+                    
+           float:left;
+           padding:10px;          
         }
     }
     .address:hover .address-select{
@@ -326,10 +328,11 @@
     margin:0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;    
     #particular-listAll{
         height:386px;
+        margin-left:10px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -392,8 +395,13 @@
                }              
                
             } 
-             .cate{
-                 margin-top:5px;
+            .flagship{
+                width:215px;
+                height: 16px;
+                line-height: 16px;
+                float: left;
+                .cate{
+                   margin-top:5px;
                    font-size:14px;
                    color:#797966;
                    float: left;              
@@ -408,7 +416,9 @@
                    background-position: -1px  -3px;
                    margin:5px;                  
                    float: left;
-               }       
+               }
+            }
+                    
         }
     }
      #particular-listAll:hover{

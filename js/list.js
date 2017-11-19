@@ -40,9 +40,18 @@ $(".change-1").mouseleave(function(){
 	$(".zhuan").css("display","none")
 })
 //发货地址 销量排序
-var provArr = ["河南","河北","湖南","湖北","山东","山西","广西","广东","福建"];
-var cityArr = [["安阳","南阳","洛阳","信阳","濮阳"],["保定","石家庄","承德"],["长沙","好","h1","h2"]];
-var countyArr = [[["林州","内黄","安阳县"],["西峡","邓州"],["洛川","伊川"]],[["南乐","好好"]]];
+var provArr = ["河南","河北","湖南","湖北","山东","山西","广西","广东","福建","四川","海南","新疆","吉林","山西","宁夏","黑龙江"];
+for( var i = 0 ; i < provArr.length ; i++ ){
+		$("#prov").append( "<div><a href='javascript:;' class='sortgoods'>"+provArr[i]+"</a></div>" )
+	}
+$("#prov div").mouseenter(function(){
+	$("#prov div").eq($(this).index()).css("color","#24C336")
+})
+$("#prov div").mouseleave(function(){
+	$("#prov div").eq($(this).index()).css("color","#666")
+})
+/*var cityArr = [["安阳","南阳","洛阳","信阳","濮阳"],["保定","石家庄","承德"],["长沙","好","h1","h2"]];
+var countyArr = [[["林州","内黄","安阳县"],["西峡","邓州"],["洛川","伊川"]],[["南乐","好好"]]];*/
 
 /*//页面打开后 将省的信息添加到对应的下拉列表
 	for( var i = 0 ; i < provArr.length ; i++ ){
@@ -83,16 +92,19 @@ var countyArr = [[["林州","内黄","安阳县"],["西峡","邓州"],["洛川",
 $(".address").click(function(){
 	$(".address-select").css("display","block")
 })
-$(".address").mouseleave(function(){
-	$(".address-select").css("display","block")
-	$(".address-select").css("display","none")
+$(".address-select").mouseleave(function(){
+	$(this).css("display","none")
 })
 
 //默认排序
 	var shunxuArr = ["价格从低到高","价格从高到低","总销量从高到低","按发布时间排序","恢复默认排序"];
 	for(var i=0;i<shunxuArr.length;i++){
-		$(".shunxu").append( "<option>"+"<em></em>"+"<span>"+shunxuArr[i]+"</span>"+"</option>" )	
+		$(".shunxu").append( "<option>"+shunxuArr[i]+"</option>" )	
 	}
+	//排序
+	$("option").eq(2).click(function(){
+		onTest();
+	})
 	//shunxuArr.eq(0).val=onTest();//................
 function onTest(){
 	var arr = $("#particular-listAll");
@@ -117,11 +129,12 @@ ajaxGet("../json/list.json",function(res){
 						<span class="upright"></span>
 						<span class="evaluate">${json[i].evaluate}</span>						
 						</p>
-						
-						<p class="cate">${json[i].cate}</p>
-						<span class="bac-msg"></span>
-				</div>				
-			</div>`
+						<div class="flagship">
+							<p class="cate">${json[i].cate}</p>
+							<span class="bac-msg"></span>
+						</div>
+				    </div>				
+			    </div>`
 	}
 	$("#particular-list").html(val);
 	tiao();

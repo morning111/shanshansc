@@ -1,0 +1,30 @@
+{
+	"classify001":{
+		"name":"热卖商品排行"，
+		"list":
+		 [
+			{"id":"01","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"已售出360笔"},
+			{"id":"02","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"已售出360笔"},
+			{"id":"03","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"已售出360笔"},
+			{"id":"04","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"已售出360笔"},
+			{"id":"05","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"已售出360笔"},
+			{"id":"06","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"已售出360笔"},
+			{"id":"07","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"已售出360笔"},
+			{"id":"08","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"已售出360笔"}
+	    ]
+	},
+	"classify002":{
+		"name":"热门收藏排行"，
+		"list":
+		 [
+			{"id":"01","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"收藏人气2"},
+			{"id":"02","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"收藏人气2"},
+			{"id":"03","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"收藏人气1"},
+			{"id":"04","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"收藏人气1"},
+			{"id":"05","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"收藏人气3"},
+			{"id":"06","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"收藏人气3"},
+			{"id":"07","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"收藏人气0"},
+			{"id":"08","img":"../images/particularsimages/201512081855188366.jpg","title":"陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮","jiage":"￥98.00元","soldOut":"收藏人气0"}
+	    ]
+	}
+}

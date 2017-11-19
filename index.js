@@ -255,7 +255,7 @@ $("#header").load("html/indexheader.html");
 	})
     
 /*  倒计时开始    */
-/*function show_time(stid)
+function show_time(stid)
 {
 	var timer = $(".main"+stid);
     timerID = stid;
@@ -307,7 +307,7 @@ $("#header").load("html/indexheader.html");
       clearTimeout(timerID)
    }
        
-}*/
+}
 /*var end = new Date("2017-11-30 00:00:00");
 	var start = new Date();
 	var t = diff(start,end);//秒

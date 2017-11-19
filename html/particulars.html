@@ -12,7 +12,7 @@
 		</div>
 		<div id="grid">
 			<div id="gridLogo">
-				<a href="javascript:;">
+				<a href="../index.html">
 					<img src="../images/listimages/logo.jpg"/ id="logo">
 				</a>
 				<span></span>
@@ -21,11 +21,11 @@
 			
 			<div id="sousuo">
 				<input type="text" class="sousuo_1" placeholder="年货潮礼 寻山大礼包"/><button>搜索</button>
-				<ul>
+				<ul id="sou-hot">
 					<li>热门搜索：</li>
-					<li><a href="javascript:;">青钱柳原叶</a></li>
-					<li><a href="javascript:;">土家鸡</a></li>
-					<li><a href="javascript:;"> 畲葛山黄粿</a></li>
+					<li class="hot-sou"><a href="javascript:;">青钱柳原叶</a></li>
+					<li class="hot-sou"><a href="javascript:;">土家鸡</a></li>
+					<li class="hot-sou"><a href="javascript:;"> 畲葛山黄粿</a></li>
 				</ul>
 			</div>
 			<div class="rightMyShanshan">
@@ -33,7 +33,12 @@
 					<a href="javascript:;">我的山山</a>
 				</div>
 				<div id="myCart">
-					<a href="javascript:;">购物车</a><div>0</div>
+					<div class="myCart_1">
+						<a href="javascript:;" class="changeColor"2>购物车</a><div>0</div>
+						<ul class="lately">
+							<p class="shangpin">最近加入购物车的商品</p>
+						</ul>
+					</div>									
 				</div>
 			</div>			
 		</div>
@@ -65,10 +70,18 @@
 		<div id="nav_2">
 			<div id="daohang">
 				<ul class="daohang_all">
-				<li><a href="javascript:;">首页</a></li>
-				<li><a href="javascript:;">全部分类</a></li>
-				<li><a href="javascript:;">信用评价</a></li>
-				<li><a href="javascript:;">店铺评分</a></li>
+				<li class="daohang_all1"><a href="javascript:;">首页</a></li>
+				<li class="daohang_all2"><a href="javascript:;">全部分类</a>
+					<div class="classify">
+						<p class="check">查看所有分类</p> 
+						<div class="classifyall">
+							
+						</div>
+						<ul class="sorts"></ul>
+					</div>
+				</li>
+				<li class="daohang_all3"><a href="javascript:;">信用评价</a></li>
+				<li class="daohang_all4"><a href="javascript:;">店铺评分</a></li>
 				</ul>
 				<div id="daoRight">
 					<a href="javascript:;">收藏本站</a>
@@ -79,13 +92,12 @@
 		<div id="nav_3">
 			<div id="daohang_1">
 				<div id="gonggao">
-					<span class="gonggao_1">公告:</span>
-						
-							<div id="scroll">
-								<p><a href="javascript:;" title="正宗赵县雪花梨 新鲜发售">陕西洛川苹果产地新鲜直供</a></p>
-								<p><a href="javascript:;" title="陕西洛川苹果产地新鲜直供">正宗赵县雪花梨 新鲜发售</a></p>
-							</div>
-						
+					<span class="gonggao_1">公告:</span>						
+					<div id="scroll">
+						<p><a href="javascript:;" title="正宗赵县雪花梨 新鲜发售">陕西洛川苹果产地新鲜直供</a></p>
+						<p><a href="javascript:;" title="正宗洛川苹果  脆甜多汁">正宗洛川苹果  脆甜多汁</a></p>
+						<p><a href="javascript:;" title="陕西洛川苹果产地新鲜直供">正宗赵县雪花梨 新鲜发售</a></p>
+					</div>						
 					<ul id="daohangCenter">
 						<li><a href="javascript:;">关键字：</a></li>
 						<li><a href="javascript:;">有机食品</a></li>
@@ -103,9 +115,7 @@
 		<!--主体部分-->
 		<div id="mainAll">
 			<div id="main">
-				<div id="mainLeft">
-
-					
+				<div id="mainLeft">					
 					<div id="dotted">
 						<p id="centerP">塬景</p>	
 					</div>
@@ -246,7 +256,7 @@
 							<button class="maimaimai2"></button>
 							<p class="saoma">
 								<img src="../images/particularsimages/smwxzf.jpg" class="zhifu"/>
-								<img src="../images/particularsimages/wx.png" class="yincang"/>
+								<img src="../images/particularsimages/erweima.jpg" class="yincang"/>
 							</p>
 						</div>
 						<div class="baozhang">
@@ -292,7 +302,8 @@
 											<em>57.14%</em>
 										</a>
 									</li>
-									<li><p class="fudong">发货速度：</p>
+									<li>
+										<p class="fudong">发货速度：</p>
 										<a href="javascript:;">
 											<em class="count">5.00</em>
 											<span class="heighter" title="计算规则:(店铺得分-山山店铺平均分)/(山山店铺最高得分-山山店铺平均分)"><b>高于</b></span>
@@ -311,7 +322,7 @@
 								<label for="">&nbsp;&nbsp;&nbsp;价格：</label>
 								<input type="text" name="" id="priceLeft" value="" />
 								<label for="">到</label>
-								<input type="text" name="" id="priceLeft" value="" />
+								<input type="text" name="" id="priceRight" value="" />
 								</p>
 								<button class="shopsou"><a href="javascript:;">店内搜索</a></button>
 							</div>
@@ -345,7 +356,7 @@
 								<h3 id="rankinglist-1">商品排行榜</h3>
 							</div>
 							<div id="hotGoodsSail">
-								<div id="hotGoods-1">
+								 <div id="hotGoods-1">
 								            热销产品排行
 								</div>
 								<div id="hotGoods-2">
@@ -443,8 +454,29 @@
 		<div id="footer">
 				
 		</div>
+		<!--rightbutton-->
 		<div id="rightButton">
-	
+			<ul class="xuanfu">
+				<li class="kefu"><img src="../images/indeximages/kf2.png" style="display:none" class="kf2"/></li>
+				<li class="rightCart">
+					<img src="../images/indeximages/gw2.png" style="display:none" class="gw2"/>
+					<div class="num">3</div>
+				</li>
+				<li class="erweima">
+					<img src="../images/indeximages/wx2.png" style="display:none" class="wx2"/>
+					<div id="ma">
+						<img src="../images/indeximages/ewm.png" id="ma-1"/>
+						<p class="weixin">山山商城微信</p>
+					</div>
+				</li>
+				<li class="shoucang"><img src="../images/indeximages/sc2.png" style="display:none" class="sc2"/></li>
+				<li class="backTop" id="a2">
+					<img src="../images/indeximages/gtop2.png" style="display:none" class="backtop2"/>
+					<div class="backTop_1">
+						<a href="javascript:;" onfocus="this.blur();"></a>
+					</div>
+				</li>
+	        </ul>
         </div>
 	</body>
 	<script type="text/javascript" src="../js/ajax.js"></script>
