@@ -343,6 +343,95 @@ function show_time(stid)
 	} , 1000)
     
     */
+ //楼梯
+ /*var flag = true;
+ $("#LoutiNav li:not(.last)").click(function(){
+ 	flag = false;
+ 	$(this).find(".tier")
+ 	       .addClass("active")
+ 	       .end()
+ 	       .siblings()
+ 	       .find(".tier")
+ 	       .removeClass("active");
+ 	       //获取某个楼层的top值 根据这个top值确定滚动条的位置
+ 	       var _top = $(".Louti").eq($(this).index()).offset().top;
+ 	       $("body,html").animate({"scrollTop":_top},1000,function(){
+ 	       	flag = true;
+ 	       	$("#LoutiNav .tier").removeClass("active")
+ 	});
+ })
+ 
+ //3 滚动条操作  控制楼层号的改变 (根据楼层的下标 找楼层号)
+ $(window).scroll(function(){
+ 	if(flag){
+ 		var sTop = $(document).scrollTop();
+ 		$floor = $(".Louti").filter(function(){
+ 			return Math.abs($(this).offset().top - sTop )<$(this).outerHeight()/2;
+ 		})
+ 		var index = $floor.index();
+	        	<!--一楼-->	
+ 		$("#LoutiNav li").eq(index)
+ 		                 .find(".tier")
+ 		                 .addClass("active")
+ 		                 .end()
+ 		                 .siblings()
+ 		                 .find(".tier")
+ 		                 .removeClass("active")
+ 	}
+ })*/
+//楼梯
+    var flag = true;//开关变量  如果值为true  滚动条可以触发
+	//1  点击楼层号    定位滚动条垂直方向滚走的距离  为  该楼层的top值  (根据楼层号的下标 找楼层)
+	$("#LoutiNav li:not(.last)").click(function(){
+		flag = false;//改变值  停止滚动条触发
+		$(this).find(".tier")
+			   .addClass("active")
+			   .end()
+			   .siblings()
+			   .find(".tier")
+			   .removeClass("active");
+		//获取某个楼层的top值    根据这个top值 确定滚动条的位置
+		var _top = $(".Louti").eq( $(this).index() ).offset().top;
+		
+		$("body,html").animate({"scrollTop" : _top },1000,function(){
+			//运动完成后  将开关改为 true  可以触发滚动条
+			flag = true;
+		});
+	})
+	
+	//2 点击top  回到顶部
+	$(".last").click(function(){
+		flag = false;
+		$("body,html").animate({"scrollTop" : 0 },1000,function(){
+			flag = true;
+			$("#LoutiNav .tier").removeClass("active");
+		});
+	})
+	
+	//3 滚动条操作  控制楼层号的改变 (根据楼层的下标 找楼层号) 	
+	$(window).scroll(function(){
+		if( flag ){ //开关变量  如果值为true  滚动条可以触发
+			//获取页面滚走的距离
+			var sTop = $(document).scrollTop();
+			
+			//过滤每一个楼层 找到满足条件的楼层  并获取该楼层的下标  根据这个下标就可以控制楼层号
+			$floor = $(".Louti").filter(function(){
+				return Math.abs( $(this).offset().top - sTop ) < $(this).outerHeight()/2;
+			})
+			
+			var index = $floor.index();//某个楼层的下标
+			
+			$("#LoutiNav li").eq(index)
+							 .find(".tier")
+							 .addClass("active")
+							 .end()
+							 .siblings()
+							 .find(".tier")
+							 .removeClass("active");
+			
+			console.log( index );
+		}
+	})
  
  
  //详情部分的json导入 一楼
@@ -571,6 +660,5 @@ $(".shoucang").mouseleave(function(){
 	$(".shoucang").css({"background":"url(images/indeximages/sc.png)"})
 	$(".sc2").css({"display":"none"})
 })
-
 
 

@@ -163,6 +163,43 @@ $(".goodsForm li").mouseleave(function(){
 	$(this).siblings()
 	       .css("backgroundColor","#fff")
 })
+
+//加入购物车部分
+$(".maimaimai2").on("click","button",function(){
+	var arr=[];
+	var flag = true;
+	var datajson ={
+		id:$(this).next().data("id"),
+		name:$(this).next().data("techan"),
+		price:$(this).next().data("danjia"),
+		src:$(this).next().data("img"),
+		count:1		
+	}
+	//再次点击时   商品会被覆盖    可以先将cookie中的数据取出来  存入到arr中
+	var oldCookie = getCookie("prolist");
+	//如果cookie中没有数据 直接push 
+	if( oldCookie.length !=0 ){
+		arr=oldCookie;
+		//再次点击商品时  判断这个商品在原cookie中是否存在  如果存在就将数量++
+		for(var i=0;i<arr.length;i++){
+			if(datajson.id == arr[i].id&&datajson.name == arr[i].name){
+				arr[i].count++;
+				flag = false;
+				break;
+			}
+		}
+	} 
+	if(flag){
+		arr.push(datajson);
+	}
+	//将数组信息存入到cookie
+	setCookie("prolist",JSON.stringify(arr) );
+	  if( confirm("点击确定跳转到购物车,点击取消继续购物")){
+	  	location.href = "../html/cart.html";
+	  }
+})
+
+
 //商品排行榜导入
 	/*$.ajax({
 		type:"get",
