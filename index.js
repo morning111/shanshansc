@@ -135,55 +135,55 @@ $("#header").load("html/indexheader.html");
 		                .css({background:"#fff"})
 	    $("#chaye-sort").css({display:"none"})
 	})
-	$("list-ul-four").mouseenter(function(){
+	$(".list-ul-four").mouseenter(function(){
 		$(".A-em4").css({backgroundPosition:"-84px -58px"})
 		$("#fourth").css({color:"#45b035"})
-		$("list-ul-four #Anav-title").parent()		                
+		$(".list-ul-four #Anav-title").parent()		                
 		                .css({background:"#fff"})
 		                .siblings()
 		                .css({background:"radial-gradient(ellipse,#ece9e9,#fcf9f9)"})
 		$("#xiuxian-sort").css({display:"block"})  
 	})
-	$("list-ul-four").mouseleave(function(){
+	$(".list-ul-four").mouseleave(function(){
 		$(".A-em4").css({backgroundPosition:"-84px 0"})
 		$("#fourth").css({color:"#666"})	
-		$("list-ul-four #Anav-title").parent()
+		$(".list-ul-four #Anav-title").parent()
 		                .css({background:"#fff"})
 		                .siblings()
 		                .css({background:"#fff"})
 	    $("#xiuxian-sort").css({display:"none"})
 	})
-	$("li:nth-child(5)").mouseenter(function(){
+	$(".list-ul-five").mouseenter(function(){
 		$(".A-em5").css({backgroundPosition:"-140px -58px"})
 		$("#fifth").css({color:"#45b035"})
-		$("li:nth-child(5) #Anav-title").parent()		                
+		$(".list-ul-five #Anav-title").parent()		                
 		                .css({background:"#fff"})
 		                .siblings()
 		                .css({background:"radial-gradient(ellipse,#ece9e9,#fcf9f9)"})
 		$("#jiushui-sort").css({display:"block"})  
 	})
-	$("li:nth-child(5)").mouseleave(function(){
+	$(".list-ul-five").mouseleave(function(){
 		$(".A-em5").css({backgroundPosition:"-140px 0"})
 		$("#fifth").css({color:"#666"})	
-		$("li:nth-child(5) #Anav-title").parent()
+		$(".list-ul-five #Anav-title").parent()
 		                .css({background:"#fff"})
 		                .siblings()
 		                .css({background:"#fff"})
 	    $("#jiushui-sort").css({display:"none"})
 	})
-	$("li:nth-child(6)").mouseenter(function(){
+	$(".list-ul-six").mouseenter(function(){
 		$(".A-em6").css({backgroundPosition:"-168px -58px"})
 		$("#sixth").css({color:"#45b035"})
-		$("li:nth-child(6) #Anav-title").parent()		                
+		$(".list-ul-six #Anav-title").parent()		                
 		                .css({background:"#fff"})
 		                .siblings()
 		                .css({background:"radial-gradient(ellipse,#ece9e9,#fcf9f9)"})
 		$("#baihuo-sort").css({display:"block"})  
 	})
-	$("li:nth-child(6)").mouseleave(function(){
+	$(".list-ul-six").mouseleave(function(){
 		$(".A-em6").css({backgroundPosition:"-168px 0"})
 		$("#sixth").css({color:"#666"})	
-		$("li:nth-child(6) #Anav-title").parent()
+		$(".list-ul-six #Anav-title").parent()
 		                .css({background:"#fff"})
 		                .siblings()
 		                .css({background:"#fff"})
@@ -379,6 +379,8 @@ function show_time(stid)
  		                 .removeClass("active")
  	}
  })*/
+
+
 //楼梯
     var flag = true;//开关变量  如果值为true  滚动条可以触发
 	//1  点击楼层号    定位滚动条垂直方向滚走的距离  为  该楼层的top值  (根据楼层号的下标 找楼层)
@@ -416,7 +418,7 @@ function show_time(stid)
 			
 			//过滤每一个楼层 找到满足条件的楼层  并获取该楼层的下标  根据这个下标就可以控制楼层号
 			$floor = $(".Louti").filter(function(){
-				return Math.abs( $(this).offset().top - sTop ) < $(this).outerHeight()/2;
+				return Math.abs( $(this).offset().top - sTop ) < $(this).outerHeight();
 			})
 			
 			var index = $floor.index();//某个楼层的下标
@@ -429,7 +431,7 @@ function show_time(stid)
 							 .find(".tier")
 							 .removeClass("active");
 			
-			console.log( index );
+
 		}
 	})
  

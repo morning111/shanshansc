@@ -748,7 +748,7 @@ input {
 /*floor*/
 #LoutiNav {
   position: fixed;
-  top: 25%;
+  top: 50%;
   left: 0px;
   width: 60px;
   border: 1px solid;
