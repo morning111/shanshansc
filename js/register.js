@@ -52,15 +52,28 @@ var user=/^[a-zA-Z_]\w{5,14}$/;
 var pass= /^[a-zA-Z]\w{5,17}$/ ;
 
 $("#btn").click(function(){
-
+        
+		/*if($("#name").val().match(email)||$("#name").val().match(phone)||$("#name").val().match(user)&&$("#pwd").val().match(pass)&&$("#repwd").val()==$("#pwd").val()&&  $("#verifyCode").val().toLowerCase()==$("#picture").html().toLowerCase()){
+		setCookie("password",$("#pwd").val())
+		console.log(getCookie("password"))
+			setCookie("username",$("#name").val())			
+			console.log(getCookie("username"))
+			
+			window.location.href="../html/login.html";
+				
+		}else{
+			$("#tip4").html("账户错误或密码不一致，请重新输入");
+		}*/
+		var arr=[];
+		if()
 		if($("#name").val().match(email)||$("#name").val().match(phone)||$("#name").val().match(user)&&$("#pwd").val().match(pass)&&$("#repwd").val()==$("#pwd").val()&&  $("#verifyCode").val().toLowerCase()==$("#picture").html().toLowerCase()){
 		setCookie("password",$("#pwd").val())
 		console.log(getCookie("password"))
-			setCookie("username",$("#name").val())
+			setCookie("username",$("#name").val())			
+			console.log(getCookie("username"))
 			
-		console.log(getCookie("username"))
-		window.location.href="../html/login.html";
-			
+			window.location.href="../html/login.html";
+				
 		}else{
 			$("#tip4").html("账户错误或密码不一致，请重新输入");
 		}

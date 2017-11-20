@@ -5,6 +5,7 @@
 		<title>购物车页</title>
 		<link rel="stylesheet" href="../css/common.css" />
 		<link rel="stylesheet" type="text/css" href="../css/cart.css"/>
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div id="header">
@@ -100,7 +101,7 @@
 				</div>
 				<div id="cart-shop-goods">
 					
-				<div id="left-cart-goods">
+				<!--<div id="left-cart-goods">
 					<input type="checkbox" name="cart-shop-select" id="cart-shop-select" value="" />
 					<img src="../images/cartimages/small_201507151611066434(2).jpg"/><p class="scan-bigPic">查看大图</p>
 					<li><span class="account-for">陕西特产 正宗洛川苹果 新鲜红富士24个80mm 脆甜多汁 产地直供</span></li>
@@ -121,7 +122,7 @@
 				<span id="money">￥188.00</span>
 				<span id="collect">收藏</span>
 				<span id="del-cart">删除</span>
-				</div>
+				</div>-->
 			</div>	
 		</div>				
 	</div>
@@ -142,9 +143,31 @@
 	</div>
 		
 		<div id="footer"></div>
-		<div id="rightButton"></div>
+		<div id="rightButton">
+			<ul class="xuanfu">
+		<li class="kefu"><img src="../images/indeximages/kf2.png" style="display:none" class="kf2"/></li>
+		<li class="rightCart">
+			<img src="../images/indeximages/gw2.png" style="display:none" class="gw2"/>
+			<div class="num">3</div>
+		</li>
+		<li class="erweima">
+			<img src="../images/indeximages/wx2.png" style="display:none" class="wx2"/>
+			<div id="ma">
+				<img src="../images/indeximages/ewm.png" id="ma-1"/>
+				<p class="weixin">山山商城微信</p>
+			</div>
+		</li>
+		<li class="shoucang"><img src="../images/indeximages/sc2.png" style="display:none" class="sc2"/></li>
+		<li class="backTop" id="a2">
+			<img src="../images/indeximages/gtop2.png" style="display:none" class="backtop2"/>
+			<div class="backTop_1">
+				<a href="javascript:;" onfocus="this.blur();"></a>
+			</div>
+		</li>
+	</ul>
+		</div>
 	</body>
 	<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/cart.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+	
 </html>

@@ -23,10 +23,11 @@ $(".kehufuwu_1").mouseleave(function(){
 
 //字体变化
 $(".same-1").mouseenter(function(){
-	$(this).css("color","#24C336")
+	$(this).css({"color":"yellow","background":"#24C336"})
+	        
 })
 $(".same-1").mouseleave(function(){
-	$(this).css("color","#666")
+	$(this).css({"color":"#666","background":"#fff"})
 })
 //水果
 $(".change-1").mouseenter(function(){
