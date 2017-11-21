@@ -15,7 +15,7 @@ oPicture.css({
 	background:ranC(),
 	color:ranC()
 })
-oPicture.html(res) 
+oPicture.html(res); 
 $("#yanzheng-1").click(function(){
 	
 	var str = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
@@ -53,19 +53,6 @@ var pass= /^[a-zA-Z]\w{5,17}$/ ;
 
 $("#btn").click(function(){
         
-		/*if($("#name").val().match(email)||$("#name").val().match(phone)||$("#name").val().match(user)&&$("#pwd").val().match(pass)&&$("#repwd").val()==$("#pwd").val()&&  $("#verifyCode").val().toLowerCase()==$("#picture").html().toLowerCase()){
-		setCookie("password",$("#pwd").val())
-		console.log(getCookie("password"))
-			setCookie("username",$("#name").val())			
-			console.log(getCookie("username"))
-			
-			window.location.href="../html/login.html";
-				
-		}else{
-			$("#tip4").html("账户错误或密码不一致，请重新输入");
-		}*/
-		var arr=[];
-		if()
 		if($("#name").val().match(email)||$("#name").val().match(phone)||$("#name").val().match(user)&&$("#pwd").val().match(pass)&&$("#repwd").val()==$("#pwd").val()&&  $("#verifyCode").val().toLowerCase()==$("#picture").html().toLowerCase()){
 		setCookie("password",$("#pwd").val())
 		console.log(getCookie("password"))
@@ -77,13 +64,12 @@ $("#btn").click(function(){
 		}else{
 			$("#tip4").html("账户错误或密码不一致，请重新输入");
 		}
+		
+		
 	})
 
 
-$("#name").focus(function(){
-	   /*oTip1.style.display = "block";		
-		oTip1.style.background="#E2ADAB";
-		oName.style.borderColor = "#DD1F1F";*/
+$("#name").focus(function(){	  
 		$("#tip1").css({
 			display:"block",
 			background:"#E2ADAB"
@@ -92,20 +78,41 @@ $("#name").focus(function(){
 			borderColor:"#DD1F1F"
 		});
 })
-
+var flagName = null;
 $("#name").blur(function(){
-if($("#name").val().match(email)||$("#name").val().match(phone)||$("#name").val().match(user)){
-console.log($(this).val())
-//正确
-$("#tip1").html("输入正确");
-$("#tip1").css({
-	display:"none"
-})
-}else{	
-	//错误
-	/*oTip1.innerHTML = "输入不能为空,请重新输入";*/
-   $("#tip1").html("输入格式错误,请重新输入");
-}
+   if($("#name").val().match(email)||$("#name").val().match(phone)||$("#name").val().match(user)){
+	console.log($(this).val())
+	    //用户名是否已存在
+		var name=getCookie("username");
+		var arr = name.split("; ");
+		var tname = "";
+		for(var i=0;i<arr.length;i++){
+			var info = arr[i].split("=");
+			if(info[0] == name){
+				tname = info[1];
+			}
+		}
+		if($("#name").val()==name){
+			//正确
+			console.log($(this).val())
+			flagName = false;
+			$("#tip1").html("用户名已存在，请重新输入");		
+		}
+		else{//正确
+			flagName = true;
+			$("#tip1").html("输入正确");
+			$("#tip1").css({
+				display:"none"
+			})
+		}	
+	}else{	
+		//错误
+		/*oTip1.innerHTML = "输入不能为空,请重新输入";*/
+		flagName = false;
+	   $("#tip1").html("输入格式错误,请重新输入");
+	}
+	
+	
 
 $("#pwd").focus(function(){
 	/*oTip2.style.display = "block";
@@ -119,11 +126,11 @@ $("#pwd").focus(function(){
 			borderColor:"#DD1F1F"
 		});
 })
-
+flagName = null
 $("#pwd").blur(function(){
 	if($("#pwd").val().match(pass)){
 	//正确
-	console.log($(this).val())
+	flagPwd = true;
 	/*oTip2.innerHTML = "输入合法";
 	oTip2.style.display = "none";*/
 	$("#tip2").html("输入正确");
@@ -133,14 +140,13 @@ $("#pwd").blur(function(){
 	}else{
 		//错误
 		/*oTip2.innerHTML = "输入不合法，请重新输入密码";*/
+		flagPwd = false;
 		$("#tip2").html("密码输入格式错误，请重新输入");
 	}
+	
 })
 
 $("#repwd").focus(function(){
-	/*oTip3.style.display = "block";
-	oRepwd.style.borderColor = "#DD1F1F";
-	oTip3.style.background="#E2ADAB";*/
 	$("#tip3").css({
 			display:"block",
 			background:"#E2ADAB"

@@ -14,9 +14,7 @@ console.log(pass);
 $("#btn").click(function(){
 	var loname=$("#name").val();
 	var lopass=$("#pwd").val();
-	console.log(loname);
-	console.log(lopass);
-	if(loname==name&& lopass==pass&&){		
+	if(loname==name&& lopass==pass){		
 			window.location.href="../index.html";
 	  }else{
 	  		$("#tip3").html("账号或密码输入错误，请重新输入");
