@@ -116,6 +116,18 @@
   margin: 5px;
   float: left;
 }
+#grid .rightMyShanshan #myCart .lately {
+  width: 105px;
+  height: auto;
+  border: 2px solid #eee;
+  display: none;
+  margin-right: 10px;
+}
+#grid .rightMyShanshan #myCart .lately .shangpin {
+  font-size: 12px;
+  color: #666;
+  margin-left: 10px;
+}
 
 /*nav*/
 #nav-cart {
@@ -130,8 +142,7 @@
 #nav-cart ul li {
   float: left;
   width: 123px;
-  height: 20px;
-  margin-top: 5px;
+  height: 27px;
   border-right: 1px solid #666;
 }
 #nav-cart ul li a {
@@ -264,7 +275,6 @@
 #cart-amount {
   width: 1190px;
   height: 500px;
-  background: yellow;
   margin: 0 auto;
 }
 #cart-amount #cart-amount-1 {

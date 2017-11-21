@@ -13,7 +13,7 @@ ajaxGet("../json/cart.json",function(res){
 				<div id="cart-shop-goods">
 					
 				<div id="left-cart-goods">
-					<input type="checkbox" name="cart-shop-select" id="cart-shop-select" value="" />
+					<input type="checkbox" name="cart-shop-select" id="cart-shop-select" class="check-all" value="" />
 					<img src="${json[i].img}"/><p class="scan-bigPic">${json[i].scanbigPic}</p>
 					<li><span class="account-for">${json[i].accountfor}</span></li>
 					<li><span class="specification">${json[i].specification}</span></li>
@@ -26,9 +26,9 @@ ajaxGet("../json/cart.json",function(res){
 				<del class="del">${json[i].del}</del>
 				<span><a href="javascript:;" class="all-cart-total">${json[i].allcarttotal}</a></span>
 				<div class="save-money">${json[i].savemoney}</div>
-				<button class="btnL">-</button>
+				<button class="btnL updateCount">-</button>
 				<input type="text" name="cart-num" id="cart-num" value="1" />
-				<button class="btnR">+</button>
+				<button class="btnR updateCount">+</button>
 				<div id="promotion">${json[i].promotion}</div>
 				<span id="money">${json[i].money}</span>
 				<span id="collect">${json[i].collect}</span>
@@ -38,7 +38,69 @@ ajaxGet("../json/cart.json",function(res){
 	}
 	$("#cart-amount-1").html(val)
 })
+//点击左侧复选框   结算商品数量和个数
+$(".check-all").click(function(){
+	jiesuan();
+})
+//全和结算
+$("#check-all").click(function(){
+	$(".check-all").prop("checked",$(this).prop("checked"));
+})
+//结算功能
+function jiesuan(){
 
+	var proMoney = 0;
+	$("..check-all:checked").each(function(){
+		
+		proMoney += parseInt($(this).parent().find(".total").html());		
+	})
+	$(".total").html(proMoney);
+}
+$(".updateCount").click(function(){
+	//确定操作的商品编号
+	var id = $(this).parent().data("id");
+	var pname = $(this).parent().data("name");
+	//获取操作符
+	var sign = $(this).html();
+	var shopnum = $(this).parent().find(".total").html();
+	if(shopnum == 1 && sign == "-"){
+		return;
+	}
+	for(var i=0;i<arr.length;i++){
+		if(id ==arr[i].id&&pname ==arr[i].name){
+			sign == "+" ? arr[i].count++:arr[i].count--;
+			//重新改写cookie数据
+			setCookie("prolist",JSON.stringify(arr));
+			//操作页面
+			$(this).parent().find(".total").html(arr[i].count);
+			$(this).parent().next().html(arr[i].count*arr[i].price + "元");
+			//结算
+			jiesuan();
+			break;
+		}
+	}
+})
+
+//删除
+$("#del-cart").click(function(){
+	//获取当前要删除的商品编号 和 名字
+	var id = $(this).parent().parent().find("button").data("id");
+	var pname = $(this).parent().parent().find("button").data("name");
+	for( var i = 0 ; i < arr.length ; i++ ){
+			if( id == arr[i].id && pname == arr[i].name ){
+				if( confirm("确定要删除么？") ){
+					//将数组中位置i处的数据删除  splic(2,1)
+					arr.splice(i,1);
+					//操作数组改变后  重新存储cookie  
+					setCookie("prolist",JSON.stringify(arr));
+					
+					//修改页面
+					$(this).parent().parent().remove();
+				}
+				break;
+			}
+		}
+})
 /*$(function(){
 	getCookie("pro1");
 	console.log(getCookie("pro1"));
@@ -57,7 +119,33 @@ ajaxGet("../json/cart.json",function(res){
 })*/
 
 $(".logo").click(function(){
-	window.location.href = "../html/index.html";
+	window.location.href = "../index.html";
+})
+
+//
+$("#myShanshan").click(function(){
+	location.href = "../html/login.html";
+})
+$("#myCart").click(function(){
+	location.href="../html/cart.html";
+})
+$("#myCart").mouseenter(function(){
+	$(".lately").css({display:"block"})
+})
+$("#myCart").mouseleave(function(){
+	$(".lately").css({display:"none"})
+})
+$(".huaguo li").mouseenter(function(){
+	$(".huaguo li").eq($(this).index())
+                   .css("background","#134A0E")
+                   .siblings()
+                   .css("background","#49a03d")
+})
+$(".huaguo li").mouseleave(function(){
+	$(".huaguo li").eq($(this).index())
+                   .css("background","#49a03d")
+                   .siblings()
+                   .css("background","#49a03d")
 })
 
 //rightButton
