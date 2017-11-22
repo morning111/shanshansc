@@ -32,7 +32,7 @@ $("#header").load("html/indexheader.html");
 	})
 	//banner
 	//lunbotu
-	var timer = setInterval(autoPlay,2000);
+	var timer = setInterval(autoPlay,3000);
 	var index = 0;
 	function autoPlay(){
 		index++;
@@ -61,7 +61,7 @@ $("#header").load("html/indexheader.html");
 		$("#little-dot li").mouseleave(function(){
 			clearInterval(timer);		 
 		    index=$(this).index();			
-		    timer = setInterval(autoPlay,2000);
+		    timer = setInterval(autoPlay,3000);
 		         		          
 		})
 	}
@@ -257,7 +257,7 @@ $("#header").load("html/indexheader.html");
 	})
   
   //倒计时 
-    var end = new Date("2017-12-5 00:00:00");
+    var end = new Date("2017-12-05 00:00:00");
 	var start = new Date();
 	var t = diff(start,end);//秒	
 	function showTime(){	
@@ -280,7 +280,7 @@ $("#header").load("html/indexheader.html");
 	var timer = setInterval(function (){
 		t--;
 		if( t <= 0 ){
-			oP.innerHTML = "抱歉该商品下架了";
+			
 			clearInterval(timer);
 		}else{
 			showTime();
@@ -546,6 +546,9 @@ $(".rightCart").mouseenter(function(){
 $(".rightCart").mouseleave(function(){
 	$(".rightCart").css({"background":"url(images/indeximages/gw.png)"})
 	$(".gw2").css({"display":"none"})
+})
+$(".rightCart").click(function(){
+	window.location.href = "html/cart.html";
 })
 $(".erweima").mouseenter(function(){
 	$(".erweima").css({"background":"none"})

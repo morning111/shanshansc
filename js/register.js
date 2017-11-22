@@ -231,6 +231,7 @@ $(".rightCart").mouseleave(function(){
 	$(".rightCart").css({"background":"url(../images/indeximages/gw.png)"})
 	$(".gw2").css({"display":"none"})
 })
+
 $(".erweima").mouseenter(function(){
 	$(".erweima").css({"background":"none"})
 	$(".wx2").css({"display":"block"})
