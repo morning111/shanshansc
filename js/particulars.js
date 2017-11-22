@@ -35,25 +35,7 @@ $(".classify").mouseleave(function(){
 	$(this).css("display","none")
 })
 
-//nav导航栏的滚动条
-/*$("#scroll").css({"marginTop":"0"});
-$("#gonggao").css({"overflow":"hidden"});
-$("#scroll").css({"marginTop":"-1px"});
-var num=0;
-function AutoScroll(){
-	num++;
-	$("#scroll").animate({
-		marginTop:"-=20px"
-	},1000,function(){
-		if(num==2){
-			num=0;
-		$(this).css("marginTop","20px")/*.animate({marginTop:"-1px"},500)*//*.find("p:first").appendTo(this);
-		    }   
-	});
-}
-$(document).ready(function(){
-	setInterval("AutoScroll()",1600);
-});*/
+
 $("#gonggao").css({"overflow":"hidden"});
 function AutoScroll(){
 	$("#scroll").animate({
@@ -199,48 +181,6 @@ $(".maimaimai2").on("click","button",function(){
 	  }
 })
 
-
-//商品排行榜导入
-	/*$.ajax({
-		type:"get",
-  		url:"http://127.0.0.1/shanshanshangcheng/json/particular.json",
-  		async:true,
-  		success:function(json){
-  			var title="";
-  			var val="";
-  			for(var attr in json){
-  				title +=`<div id="hotGoods-1" class="active">${ json[attr].name }</div>`;
-				for(var i = 0; i<json.length;i++){
-		            val +=`<li>
-							    <img src="${json[i].img}"/>
-								<a href="javascript:;" title="陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮 ">${json[i].title}</a>
-								<span class="jiage">${json[i].jiage}</span>
-								<div class="soldOut">${json[i].soldOut}</div>
-							</li>`
-					}
-				}
-  			    $("#hotGoodsSail").html(title);
-				$(".hotgoodsList").html(val);
-				
-				//实现选项卡分类效果
-			$("#hotGoodsSail .active").mouseenter(function(){
-				var index = $(this).index() +1;
-				var cname = "classify00" + index;
-				var str = "";
-				for(var i=0;i<json[cname].list.length;i++){
-					var product = json[cname].list[i];
-					str +=`<li>
-					<img src="${json[i].img}"/>
-									<a href="cart.html?pid=${product.id}&cname=${attr}" title="陕西特产 正宗洛川苹果 新鲜红富士24个75mm果径 脆甜多汁 多省包邮 ">${json[i].title}</a>
-									<span class="jiage">${json[i].jiage}</span>
-									<div class="soldOut">${json[i].soldOut}</div>
-									<span style="display:none" data-id=${product.id} data-img=${product.img} data-zhushi=${product.zhushi} data-cuxiaojiage=${product.cuxiaojiage} data-danjia=${product.danjia}></span>
-								</li>`
-				    }
-				    $(".hotgoodsList").html(str);
-			   }) 			
-  		    }
-	    })*/
 	
 	ajaxGet("../json/particular.json",function(res){
 	var json = JSON.parse(res);

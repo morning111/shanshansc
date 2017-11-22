@@ -101,22 +101,7 @@ $("#del-cart").click(function(){
 			}
 		}
 })
-/*$(function(){
-	getCookie("pro1");
-	console.log(getCookie("pro1"));
-	$.("../json/cart.json").then(function(res){
-		
-		
-		var acook = eval(getCookie("pro1"))
-		var html = "";
-		for(var i=0;i<acook.length;i++){
-			console.log(acook[i].id);
-			var num = acook[i].num;
-			id=acook[i].id;
-			html+=``
-		}
-	})
-})*/
+
 
 $(".logo").click(function(){
 	window.location.href = "../index.html";

@@ -60,9 +60,7 @@ $("#header").load("html/indexheader.html");
 		})		
 		$("#little-dot li").mouseleave(function(){
 			clearInterval(timer);		 
-		    index=$(this).index();
-			/*$("#lunbotu-pic li").eq($(this).index()).css({"zIndex":-1,"opacity":0,"display":"none"})
-			                    .siblings().css({"zIndex":1,"opacity":1,"display":"list-item"});*/
+		    index=$(this).index();			
 		    timer = setInterval(autoPlay,2000);
 		         		          
 		})
@@ -257,133 +255,38 @@ $("#header").load("html/indexheader.html");
 			})
 		}
 	})
-    
-/*  倒计时开始    */
-function show_time(stid)
-{
-	var timer = $(".main"+stid);
-    timerID = stid;
-    if(!timer){
-      return ;
-	}
-	if(stid != 1){
-		var end_time = $(".main"+stid).attr('end_time');
-		var now = new Date();   
-		var date = now.getTime();
-		var time = Math.floor(date / (1000));      
-		time_distance= parseInt(end_time) - parseInt(time);//结束的时间
-	 }else{
-		 time_distance=$('.main'+stid).attr('levetime');//结束的时间
-	 } 
-    var time_now,time_distance,str_time;
-    var int_day,int_hour,int_minute,int_second;
-    if(time_distance>0)
-    {
-      if(stid ==1){
-    	  time_distance--;
-      }     
-      $('.main'+stid).attr('levetime',time_distance);
-      int_day=Math.floor(time_distance/86400)
-      time_distance-=int_day*86400;
-      int_hour=Math.floor(time_distance/3600)
-      time_distance-=int_hour*3600;
-      int_minute=Math.floor(time_distance/60)
-      time_distance-=int_minute*60;
-      int_second=Math.floor(time_distance/1)
-      if(int_hour<10)
-       int_hour="0"+int_hour;
-      if(int_minute<10)
-       int_minute="0"+int_minute;
-      if(int_second<10)
-       int_second="0"+int_second;
-
-      //str_time=int_day+"天"+int_hour+"小时"+int_minute+"分"+int_second+"秒";
-      $(".time_"+stid).children('.day').html(int_day);
-      $(".time_"+stid).children('.hour').html(int_hour);
-      $(".time_"+stid).children('.min').html(int_minute);
-      $(".time_"+stid).children('.sec').html(int_second);
-      setTimeout("show_time('"+stid+"')",1000);
-   }else{
-       $(".time_"+stid).children('.day').html('00');
-       $(".time_"+stid).children('.hour').html('00');
-       $(".time_"+stid).children('.min').html('00');
-       $(".time_"+stid).children('.sec').html('00');
-      clearTimeout(timerID)
-   }
-       
-}
-/*var end = new Date("2017-11-30 00:00:00");
+  
+  //倒计时 
+    var end = new Date("2017-12-5 00:00:00");
 	var start = new Date();
-	var t = diff(start,end);//秒
-	var oP = document.getElementsByClassName("time-one")[0];
-	var yu = document.getElementsByClassName("yu");
-	var shi = document.getElementsByClassName("shi");
-	var fen = document.getElementsByClassName("fen");
-	var hour = document.getElementsByClassName("hour");
-	var miao = document.getElementsByClassName("miao");
-	var minite = document.getElementsByClassName("minite");
-	var timeover = document.getElementsByClassName("timeover");
-	var day = document.getElementsByClassName("day");
-	function showTime(){
+	var t = diff(start,end);//秒	
+	function showTime(){	
+		//剩余天数
+		var d = parseInt(t/3600/24);
 		//剩余的小时数
-		var fen = parseInt( t / 3600 ) ;
+		var h = parseInt( (t-d*3600*24) /3600) ;
 		//剩余的分钟数
-		var m = parseInt( (t - h*3600) / 60 ) ;
+		var m = parseInt( (t - h*3600-d*3600*24) / 60 ) ;
 		//剩余的秒数
-		var s = parseInt( t - h*3600 - m * 60 );
-		oP.innerHTML = "剩余" + fen + "小时" + m + "分钟" + s + "秒";	
-		return "剩余" + h + "小时" + m + "分钟" + s + "秒";
+		var s = parseInt( t - h*3600-d*3600*24 - m * 60 );		
+		$(".tian").text(d) ;	
+		$(".shi").text(h) ;
+		$(".fen").text(m) ;
+		$(".miao").text(s) ;
 	}
-	//页面加载时显示时间 防止时间显示延时问题
-	oP.innerHTML = showTime();	
+	
+	showTime();
+	
 	var timer = setInterval(function (){
 		t--;
 		if( t <= 0 ){
-			
+			oP.innerHTML = "抱歉该商品下架了";
 			clearInterval(timer);
 		}else{
 			showTime();
 		}
 	} , 1000)
-    
-    */
- //楼梯
- /*var flag = true;
- $("#LoutiNav li:not(.last)").click(function(){
- 	flag = false;
- 	$(this).find(".tier")
- 	       .addClass("active")
- 	       .end()
- 	       .siblings()
- 	       .find(".tier")
- 	       .removeClass("active");
- 	       //获取某个楼层的top值 根据这个top值确定滚动条的位置
- 	       var _top = $(".Louti").eq($(this).index()).offset().top;
- 	       $("body,html").animate({"scrollTop":_top},1000,function(){
- 	       	flag = true;
- 	       	$("#LoutiNav .tier").removeClass("active")
- 	});
- })
- 
- //3 滚动条操作  控制楼层号的改变 (根据楼层的下标 找楼层号)
- $(window).scroll(function(){
- 	if(flag){
- 		var sTop = $(document).scrollTop();
- 		$floor = $(".Louti").filter(function(){
- 			return Math.abs($(this).offset().top - sTop )<$(this).outerHeight()/2;
- 		})
- 		var index = $floor.index();
-	        	<!--一楼-->	
- 		$("#LoutiNav li").eq(index)
- 		                 .find(".tier")
- 		                 .addClass("active")
- 		                 .end()
- 		                 .siblings()
- 		                 .find(".tier")
- 		                 .removeClass("active")
- 	}
- })*/
-
+	
 
 //楼梯
     var flag = true;//开关变量  如果值为true  滚动条可以触发
@@ -434,12 +337,8 @@ function show_time(stid)
 							 .siblings()
 							 .find(".tier")
 							 .removeClass("active");
-			
-
 		}
-	})
- 
- 
+	}) 
  //详情部分的json导入 一楼
 ajaxGet("json/index1.json",function(res){
 	var json = JSON.parse(res);

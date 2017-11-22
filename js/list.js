@@ -1,25 +1,7 @@
 $("#footer").load("footer.html");
 $("#header").load("header.html");
 
-/*//header
-$(".dingdan_1").mouseenter(function(){
-	$(".dingdan_2").css("display","block")
-})
-$(".dingdan_1").mouseleave(function(){
-	$(".dingdan_2").css("display","none")
-})
-$(".shoucangjia_1").mouseenter(function(){
-	$(".shoucangjia_2").css("display","block")
-})
-$(".shoucangjia_1").mouseleave(function(){
-	$(".shoucangjia_2").css("display","none")
-})
-$(".kehufuwu_1").mouseenter(function(){
-	$(".kehufuwu_2").css("display","block")
-})
-$(".kehufuwu_1").mouseleave(function(){
-	$(".kehufuwu_2").css("display","none")
-})*/
+
 
 //字体变化
 $(".same-1").mouseenter(function(){
