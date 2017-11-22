@@ -97,7 +97,11 @@ $("#header").load("html/indexheader.html");
 		                .css({background:"#fff"})
 		$("#shengxian-sort").css({display:"none"})
 	})
-	
+	$("#shengxian-text a").click(function(){
+		$("#shengxian-text a").eq($(this).index())
+		                      .css("color","#45b035")
+		window.location.href = "html/list.html";
+	})
 	
 	$(".list-ul-two").mouseenter(function(){
 		$(".A-em2").css({backgroundPosition:"-28px -58px"})
